@@ -9,10 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@babylonjs/core": "^7.12.0",
-    "@babylonjs/loaders": "^7.12.0",
-    "@babylonjs/materials": "^7.12.0",
-    "@babylonjs/serializers": "^7.12.0",
+    "@babylonjs/core": "^9.9.1",
+    "@babylonjs/loaders": "^9.9.1",
+    "@babylonjs/materials": "^9.9.1",
+    "@babylonjs/serializers": "^9.9.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "simplex-noise": "^4.0.1",
