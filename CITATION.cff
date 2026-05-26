@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use Infiniteworlds in academic work, research, or derivative projects, please cite it as below."
+title: "Infiniteworlds: A Voice-Interactive, Multi-Agent LLM-Driven 3D World Engine"
+abstract: >-
+  Infiniteworlds is an open-source, never-ending storytelling engine that
+  generates infinitely morphing 3D worlds from natural-language conversation.
+  It combines a multi-agent LLM architecture (World GM, Companion, Task
+  Generator) routed through a local provider-aggregator proxy, real-time
+  voice I/O via Whisper and ElevenLabs Conversational AI, procedural
+  Babylon.js terrain across five scale tiers (cosmic to nano), and a
+  persistent "legacy echo" memory layer that lets deleted worlds bleed
+  fragments into future ones.
+type: software
+authors:
+  - given-names: Infiniteworlds
+    family-names: Contributors
+    affiliation: Open Source Community
+repository-code: "https://github.com/curiousstitches/Infiniteworlds"
+url: "https://github.com/curiousstitches/Infiniteworlds"
+license: MIT
+version: "0.1.0"
+date-released: "2026-05-25"
+keywords:
+  - large-language-models
+  - multi-agent-systems
+  - procedural-generation
+  - voice-interaction
+  - real-time-3d
+  - babylon-js
+  - webgpu
+  - generative-game-design
+  - conversational-ai
+  - elevenlabs
+  - whisper
+  - human-ai-interaction
+preferred-citation:
+  type: software
+  title: "Infiniteworlds: A Voice-Interactive, Multi-Agent LLM-Driven 3D World Engine"
+  authors:
+    - given-names: Infiniteworlds
+      family-names: Contributors
+  year: 2026
+  url: "https://github.com/curiousstitches/Infiniteworlds"
+  version: "0.1.0"
+  license: MIT

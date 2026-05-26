@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/YOUR_USERNAME/Infiniteworlds/discussions
+    about: Ask questions, share worlds you've built, and discuss ideas.
+  - name: 🛡️ Security Disclosure
+    url: https://github.com/YOUR_USERNAME/Infiniteworlds/security/advisories/new
+    about: Report a security vulnerability privately.

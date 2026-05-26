@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800">
+  <defs>
+    <radialGradient id="heroSky" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#1a0a3a"/>
+      <stop offset="40%" stop-color="#0a0518"/>
+      <stop offset="100%" stop-color="#000005"/>
+    </radialGradient>
+    <radialGradient id="nebulaR" cx="75%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#7a3acc" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7a3acc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nebulaL" cx="20%" cy="65%" r="35%">
+      <stop offset="0%" stop-color="#ff44aa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff44aa" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wmHero" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#e0c8ff"/>
+      <stop offset="100%" stop-color="#7a3acc"/>
+    </linearGradient>
+    <radialGradient id="voidH" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cc88ff" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#7a3acc" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#000005"/>
+    </radialGradient>
+    <filter id="phoneShadow"><feGaussianBlur stdDeviation="20"/></filter>
+    <filter id="glowH"><feGaussianBlur stdDeviation="3"/></filter>
+
+    <!-- Reusable phone screen styles -->
+    <linearGradient id="forestBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="50%" stop-color="#1a3a2a"/>
+      <stop offset="100%" stop-color="#2d4a1e"/>
+    </linearGradient>
+    <linearGradient id="caveBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="microBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#001a00"/>
+      <stop offset="100%" stop-color="#004400"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="800" fill="url(#heroSky)"/>
+  <rect width="1600" height="800" fill="url(#nebulaR)"/>
+  <rect width="1600" height="800" fill="url(#nebulaL)"/>
+
+  <!-- Star field -->
+  <g fill="#ffffff">
+    <circle cx="80" cy="120" r="1.2" opacity="0.95"/>
+    <circle cx="180" cy="80" r="0.8" opacity="0.85"/>
+    <circle cx="280" cy="160" r="1.0" opacity="0.9"/>
+    <circle cx="420" cy="100" r="0.6" opacity="0.75"/>
+    <circle cx="550" cy="180" r="1.1" opacity="0.9"/>
+    <circle cx="680" cy="60" r="0.8" opacity="0.85"/>
+    <circle cx="820" cy="140" r="1.3" opacity="0.95"/>
+    <circle cx="950" cy="90" r="0.7" opacity="0.8"/>
+    <circle cx="1100" cy="170" r="1.0" opacity="0.9"/>
+    <circle cx="1250" cy="110" r="0.5" opacity="0.7"/>
+    <circle cx="1380" cy="80" r="1.2" opacity="0.95"/>
+    <circle cx="1500" cy="160" r="0.9" opacity="0.85"/>
+    <circle cx="120" cy="250" r="0.7" opacity="0.8"/>
+    <circle cx="380" cy="300" r="1.0" opacity="0.9"/>
+    <circle cx="640" cy="280" r="0.6" opacity="0.75"/>
+    <circle cx="980" cy="320" r="0.8" opacity="0.85"/>
+    <circle cx="1320" cy="280" r="1.1" opacity="0.9"/>
+    <circle cx="80" cy="450" r="0.9" opacity="0.85"/>
+    <circle cx="300" cy="500" r="0.6" opacity="0.75"/>
+    <circle cx="560" cy="520" r="1.0" opacity="0.9"/>
+    <circle cx="880" cy="480" r="0.8" opacity="0.85"/>
+    <circle cx="1200" cy="540" r="0.7" opacity="0.8"/>
+    <circle cx="1480" cy="500" r="1.0" opacity="0.9"/>
+    <circle cx="150" cy="650" r="0.7" opacity="0.8"/>
+    <circle cx="430" cy="700" r="0.9" opacity="0.85"/>
+    <circle cx="800" cy="680" r="0.6" opacity="0.75"/>
+    <circle cx="1100" cy="720" r="1.1" opacity="0.9"/>
+    <circle cx="1400" cy="680" r="0.8" opacity="0.85"/>
+  </g>
+
+  <!-- Distant planet -->
+  <circle cx="1380" cy="240" r="80" fill="#3a1060" opacity="0.6"/>
+  <ellipse cx="1380" cy="240" rx="110" ry="10" fill="none" stroke="#cc88ff" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Logo + tagline (center left) -->
+  <g transform="translate(60 320)">
+    <g filter="url(#glowH)">
+      <ellipse cx="-28" cy="0" rx="38" ry="38" fill="url(#voidH)"/>
+      <ellipse cx="28" cy="0" rx="38" ry="38" fill="url(#voidH)"/>
+      <path d="M -28 0 Q 0 -20 28 0 Q 0 20 -28 0 Z" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.8"/>
+    </g>
+
+    <text x="80" y="0" font-family="Cinzel Decorative, serif" font-weight="900"
+          font-size="56" letter-spacing="6" fill="url(#wmHero)">INFINITEWORLDS</text>
+    <text x="80" y="38" font-family="Crimson Pro, serif" font-style="italic" font-size="20"
+          letter-spacing="5" fill="#aa88dd" opacity="0.85">EVERY · WORD · RESHAPES · REALITY</text>
+
+    <!-- Pillar list -->
+    <g transform="translate(0 100)" font-family="Crimson Pro, serif" fill="#e0c8ff">
+      <text x="0" y="0" font-size="22" font-style="italic">Voice-interactive AI companions.</text>
+      <text x="0" y="32" font-size="22" font-style="italic">Procedural 3D worlds that morph as you speak.</text>
+      <text x="0" y="64" font-size="22" font-style="italic">Scale from cosmic to subatomic.</text>
+      <text x="0" y="96" font-size="22" font-style="italic">No story. No end. Just words.</text>
+    </g>
+
+    <!-- CTA -->
+    <g transform="translate(0 260)">
+      <rect x="0" y="0" width="180" height="50" rx="10" fill="rgba(120,40,200,0.7)" stroke="#aa66ff"/>
+      <text x="90" y="32" text-anchor="middle" font-family="Cinzel Decorative, serif"
+            font-size="13" letter-spacing="3" fill="#ffffff">BEGIN</text>
+
+      <text x="200" y="32" font-family="Crimson Pro, serif" font-style="italic"
+            font-size="14" fill="#7a5a99">github.com/YOUR_USERNAME/Infiniteworlds</text>
+    </g>
+  </g>
+
+  <!-- Three phone screens in tilted perspective on the right -->
+  <!-- Back phone (cave biome) -->
+  <g transform="translate(880 60) rotate(8)" filter="url(#phoneShadow)" opacity="0.85">
+    <rect x="0" y="0" width="180" height="380" rx="22" fill="#000" stroke="#222"/>
+    <rect x="5" y="5" width="170" height="370" rx="18" fill="url(#caveBg)"/>
+    <!-- Cave with crystals -->
+    <polygon points="40,300 50,250 60,300 70,260 80,300" fill="#cc88ff" opacity="0.6"/>
+    <polygon points="110,320 125,275 140,320 150,280 160,320" fill="#aa66ff" opacity="0.5"/>
+    <circle cx="60" cy="280" r="18" fill="#cc88ff" opacity="0.3" filter="url(#glowH)"/>
+    <text x="20" y="42" font-family="Crimson Pro, serif" font-style="italic" font-size="9" fill="#dcc8ff">The Hollow Below</text>
+    <rect x="20" y="55" width="40" height="12" rx="6" fill="rgba(20,10,50,0.7)" stroke="#7a3acc" stroke-opacity="0.3"/>
+    <text x="40" y="64" text-anchor="middle" font-family="Cinzel, serif" font-size="6" letter-spacing="0.5" fill="#aa88dd">◎ HUMAN</text>
+  </g>
+
+  <!-- Middle phone (forest game) -->
+  <g transform="translate(1060 80) rotate(-3)" filter="url(#phoneShadow)">
+    <rect x="0" y="0" width="200" height="430" rx="25" fill="#000" stroke="#333" stroke-width="1.5"/>
+    <rect x="5" y="5" width="190" height="420" rx="20" fill="url(#forestBg)"/>
+    <!-- Forest scene -->
+    <path d="M 5 220 L 40 180 L 80 200 L 120 165 L 160 195 L 195 175 L 195 270 L 5 270 Z" fill="#0a1f10" opacity="0.7"/>
+    <rect x="5" y="270" width="190" height="155" fill="#1a3012"/>
+    <g fill="#0d2010">
+      <path d="M 30 280 L 36 260 L 42 280 Z"/>
+      <path d="M 80 295 L 88 270 L 96 295 Z"/>
+      <path d="M 140 285 L 148 263 L 156 285 Z"/>
+    </g>
+    <!-- Companion -->
+    <g transform="translate(100 320)">
+      <ellipse cx="0" cy="20" rx="8" ry="12" fill="#5a3a8a"/>
+      <circle cx="0" cy="2" r="7" fill="#7a4abf"/>
+      <circle cx="-2" cy="2" r="1" fill="#ffeeff"/>
+      <circle cx="2" cy="2" r="1" fill="#ffeeff"/>
+    </g>
+    <!-- HUD -->
+    <text x="20" y="42" font-family="Crimson Pro, serif" font-style="italic" font-size="10" fill="#dcc8ff">Whispering Grove</text>
+    <rect x="20" y="55" width="42" height="14" rx="7" fill="rgba(20,10,50,0.7)" stroke="#7a3acc" stroke-opacity="0.3"/>
+    <text x="41" y="64" text-anchor="middle" font-family="Cinzel, serif" font-size="6" letter-spacing="0.5" fill="#aa88dd">◎ HUMAN</text>
+    <rect x="66" y="55" width="42" height="14" rx="7" fill="rgba(20,10,50,0.7)" stroke="#7a3acc" stroke-opacity="0.3"/>
+    <text x="87" y="64" text-anchor="middle" font-family="Cinzel, serif" font-size="6" letter-spacing="0.5" fill="#aa88dd">FOREST</text>
+    <!-- Subtitle -->
+    <rect x="20" y="370" width="160" height="22" rx="11" fill="rgba(0,0,0,0.6)"/>
+    <text x="100" y="385" text-anchor="middle" font-family="Crimson Pro, serif" font-size="9" fill="#96dcff">"Did you hear that...?"</text>
+    <!-- Mic -->
+    <circle cx="100" cy="408" r="11" fill="#3c0a8e" stroke="#b450ff" stroke-width="0.5"/>
+    <text x="100" y="412" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#fff">◉</text>
+  </g>
+
+  <!-- Front phone (micro biome) -->
+  <g transform="translate(1280 100) rotate(12)" filter="url(#phoneShadow)" opacity="0.9">
+    <rect x="0" y="0" width="170" height="360" rx="22" fill="#000" stroke="#222"/>
+    <rect x="5" y="5" width="160" height="350" rx="18" fill="url(#microBg)"/>
+    <!-- Microorganism world -->
+    <g fill="#44ff44" opacity="0.5">
+      <circle cx="40" cy="200" r="20"/>
+      <circle cx="100" cy="250" r="28"/>
+      <circle cx="60" cy="290" r="16"/>
+      <circle cx="130" cy="180" r="14"/>
+    </g>
+    <g fill="#88ff88" opacity="0.7">
+      <circle cx="40" cy="200" r="8"/>
+      <circle cx="100" cy="250" r="12"/>
+      <circle cx="130" cy="180" r="6"/>
+    </g>
+    <!-- Microparticles -->
+    <g fill="#aaffaa">
+      <circle cx="30" cy="120" r="1"/>
+      <circle cx="80" cy="140" r="0.8"/>
+      <circle cx="120" cy="100" r="1.2"/>
+      <circle cx="150" cy="200" r="0.9"/>
+      <circle cx="50" cy="160" r="0.7"/>
+    </g>
+    <text x="20" y="42" font-family="Crimson Pro, serif" font-style="italic" font-size="9" fill="#aaffaa">Inside the Cell</text>
+    <rect x="20" y="55" width="34" height="12" rx="6" fill="rgba(20,50,20,0.7)" stroke="#44ff44" stroke-opacity="0.3"/>
+    <text x="37" y="64" text-anchor="middle" font-family="Cinzel, serif" font-size="6" letter-spacing="0.5" fill="#88ff88">∙ NANO</text>
+  </g>
+
+  <!-- Bottom strip -->
+  <g transform="translate(0 740)">
+    <rect width="1600" height="60" fill="#000" opacity="0.5"/>
+    <text x="60" y="30" font-family="Cinzel, serif" font-size="11" letter-spacing="4" fill="#7a5a99">OPEN SOURCE</text>
+    <text x="60" y="48" font-family="Crimson Pro, serif" font-style="italic" font-size="13" fill="#aa88dd">MIT License · Built with Babylon.js + Claude + ElevenLabs + Meshy.ai</text>
+
+    <g transform="translate(1280 22)" font-family="Crimson Pro, serif" font-size="13" fill="#aa88dd">
+      <text x="0" y="12" letter-spacing="3">★ STAR</text>
+      <text x="80" y="12" letter-spacing="3">⑂ FORK</text>
+      <text x="170" y="12" letter-spacing="3">⇣ CLONE</text>
+    </g>
+  </g>
+</svg>

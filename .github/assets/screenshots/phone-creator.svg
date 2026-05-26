@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 900" width="440" height="900">
+  <defs>
+    <linearGradient id="bz" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1a1f"/><stop offset="100%" stop-color="#0a0a0f"/></linearGradient>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0418"/>
+      <stop offset="50%" stop-color="#1a0a38"/>
+      <stop offset="100%" stop-color="#2a1058"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cc88ff"/>
+      <stop offset="100%" stop-color="#7a3acc"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(40,20,80,0.7)"/>
+      <stop offset="100%" stop-color="rgba(20,10,40,0.6)"/>
+    </linearGradient>
+    <radialGradient id="charPreviewBg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#5a3a8a"/>
+      <stop offset="60%" stop-color="#1a0840"/>
+      <stop offset="100%" stop-color="#0a0418"/>
+    </radialGradient>
+    <radialGradient id="suitWhite" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="100%" stop-color="#a8a4a0"/>
+    </radialGradient>
+    <radialGradient id="skinTone" cx="50%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#f6d8b8"/>
+      <stop offset="60%" stop-color="#d8ac88"/>
+      <stop offset="100%" stop-color="#a87858"/>
+    </radialGradient>
+    <radialGradient id="rimLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cc88ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#cc88ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="440" height="900" rx="60" fill="url(#bz)"/>
+  <rect x="10" y="10" width="420" height="880" rx="50" fill="#000"/>
+
+  <clipPath id="screen"><rect x="20" y="20" width="400" height="860" rx="42"/></clipPath>
+  <g clip-path="url(#screen)">
+    <rect x="20" y="20" width="400" height="860" fill="url(#bgGrad)"/>
+    <g fill="#fff">
+      <circle cx="60" cy="120" r="1" opacity="0.8"/>
+      <circle cx="380" cy="180" r="1.2" opacity="0.9"/>
+      <circle cx="120" cy="260" r="0.8" opacity="0.6"/>
+      <circle cx="340" cy="320" r="1" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- Status bar -->
+  <text x="50" y="55" font-family="system-ui" font-size="13" font-weight="700" fill="#fff">9:42</text>
+  <rect x="170" y="35" width="100" height="28" rx="14" fill="#000"/>
+  <g transform="translate(360 42)">
+    <rect width="18" height="11" rx="2" fill="none" stroke="#fff"/>
+    <rect x="2" y="2" width="14" height="7" fill="#fff"/>
+    <rect x="20" y="1" width="2" height="9" rx="1" fill="#fff"/>
+  </g>
+
+  <!-- Back + header -->
+  <g transform="translate(40 100)">
+    <text x="0" y="20" font-family="system-ui" font-size="20" fill="#fff">‹</text>
+    <text x="20" y="20" font-family="system-ui" font-size="12" font-weight="600" fill="rgba(255,255,255,0.7)">Back</text>
+  </g>
+
+  <g transform="translate(40 140)">
+    <text x="0" y="0" font-family="system-ui" font-size="10" font-weight="700" fill="#cc88ff" letter-spacing="2">STEP 4 OF 5</text>
+    <text x="0" y="28" font-family="system-ui" font-size="22" font-weight="800" fill="#fff">Meet your companion.</text>
+  </g>
+
+  <!-- Progress bar -->
+  <g transform="translate(40 195)">
+    <rect width="360" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+    <rect width="288" height="4" rx="2" fill="url(#primary)"/>
+  </g>
+
+  <!-- PORTRAIT PREVIEW -->
+  <g transform="translate(40 215)">
+    <rect width="360" height="320" rx="20" fill="url(#charPreviewBg)" stroke="rgba(204,136,255,0.3)"/>
+    <clipPath id="portClip"><rect width="360" height="320" rx="20"/></clipPath>
+    <g clip-path="url(#portClip)">
+      <ellipse cx="180" cy="160" rx="240" ry="180" fill="url(#rimLight)"/>
+
+      <!-- Companion close portrait -->
+      <g transform="translate(180 200)">
+        <!-- Suit collar/shoulders -->
+        <path d="M -90 130 Q -100 220 -90 320 L 90 320 Q 100 220 90 130 Z" fill="url(#suitWhite)"/>
+        <path d="M -50 140 Q -55 200 -45 280 L 45 280 Q 55 200 50 140 Z" fill="#ff8040"/>
+        <ellipse cx="-80" cy="135" rx="22" ry="14" fill="url(#suitWhite)"/>
+        <ellipse cx="80" cy="135" rx="22" ry="14" fill="url(#suitWhite)"/>
+        <ellipse cx="-80" cy="138" rx="12" ry="7" fill="#ff8040"/>
+        <ellipse cx="80" cy="138" rx="12" ry="7" fill="#ff8040"/>
+        <ellipse cx="0" cy="100" rx="48" ry="14" fill="#3a3530"/>
+        <ellipse cx="0" cy="96" rx="44" ry="10" fill="#5a5450"/>
+
+        <!-- Neck -->
+        <rect x="-14" y="70" width="28" height="30" fill="url(#skinTone)"/>
+
+        <!-- Face -->
+        <ellipse cx="0" cy="30" rx="48" ry="58" fill="url(#skinTone)"/>
+        <ellipse cx="-12" cy="6" rx="24" ry="26" fill="#fff5e0" opacity="0.25"/>
+        <ellipse cx="18" cy="20" rx="14" ry="10" fill="#fff5e0" opacity="0.2"/>
+
+        <!-- Hair -->
+        <path d="M -48 -10 Q -52 -42 -28 -56 Q 0 -66 28 -56 Q 50 -42 50 -10 Q 46 -20 38 -28 Q 22 -42 0 -42 Q -22 -42 -38 -28 Q -46 -20 -48 -10 Z" fill="#1a0c08"/>
+        <path d="M -48 -10 Q -56 14 -48 36 Q -42 16 -42 -8 Z" fill="#1a0c08"/>
+        <path d="M 48 -10 Q 56 18 48 42 Q 44 18 44 -6 Z" fill="#1a0c08"/>
+        <path d="M -38 -12 Q -10 -22 24 -12 Q 32 -8 36 -18 Q 18 -28 -10 -26 Q -28 -22 -38 -12 Z" fill="#0a0404"/>
+
+        <!-- Brows -->
+        <path d="M -30 -2 Q -16 -8 -3 -2" stroke="#1a0c08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M 5 -2 Q 18 -8 30 -2" stroke="#1a0c08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+        <!-- Eyes with SSS detail -->
+        <g transform="translate(-17 10)">
+          <ellipse rx="8" ry="4.5" fill="#fff8ee"/>
+          <circle r="4" fill="#5a3818"/>
+          <circle r="2" fill="#0a0404"/>
+          <circle cx="1" cy="-1.5" r="1.5" fill="#fff"/>
+        </g>
+        <g transform="translate(17 10)">
+          <ellipse rx="8" ry="4.5" fill="#fff8ee"/>
+          <circle r="4" fill="#5a3818"/>
+          <circle r="2" fill="#0a0404"/>
+          <circle cx="1.5" cy="-1.5" r="1.5" fill="#fff"/>
+        </g>
+
+        <!-- Nose -->
+        <path d="M -3 18 Q 0 32 -4 40 Q -1 44 4 40 Q 6 32 3 18 Z" fill="#c89878" opacity="0.55"/>
+        <ellipse cx="-3" cy="42" rx="1.6" ry="1" fill="#a87858" opacity="0.7"/>
+        <ellipse cx="3" cy="42" rx="1.6" ry="1" fill="#a87858" opacity="0.7"/>
+
+        <!-- Mouth -->
+        <path d="M -10 60 Q 0 67 10 60 Q 0 70 -10 60 Z" fill="#b86858"/>
+        <path d="M -9 60 Q 0 62 9 60" stroke="#7a3828" stroke-width="0.8" fill="none"/>
+
+        <!-- Chin highlight -->
+        <ellipse cx="0" cy="72" rx="10" ry="4" fill="#fff5e0" opacity="0.18"/>
+      </g>
+    </g>
+
+    <!-- Name overlay bottom -->
+    <rect y="260" width="360" height="60" fill="rgba(10,4,24,0.85)"/>
+    <text x="180" y="288" font-family="system-ui" font-size="18" font-weight="800" text-anchor="middle" fill="#fff">Stella</text>
+    <text x="180" y="306" font-family="system-ui" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Mission Specialist · Human · Voice: Mystical Female</text>
+  </g>
+
+  <!-- Trait pills -->
+  <g transform="translate(40 555)">
+    <text x="0" y="0" font-family="system-ui" font-size="10" font-weight="700" fill="rgba(204,136,255,0.7)" letter-spacing="1.5">CORE TRAITS</text>
+    <g transform="translate(0 14)">
+      <rect width="80" height="28" rx="14" fill="rgba(204,136,255,0.15)" stroke="rgba(204,136,255,0.3)"/>
+      <text x="40" y="18" font-family="system-ui" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">Curious</text>
+    </g>
+    <g transform="translate(86 14)">
+      <rect width="76" height="28" rx="14" fill="rgba(204,136,255,0.15)" stroke="rgba(204,136,255,0.3)"/>
+      <text x="38" y="18" font-family="system-ui" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">Loyal</text>
+    </g>
+    <g transform="translate(168 14)">
+      <rect width="84" height="28" rx="14" fill="rgba(204,136,255,0.15)" stroke="rgba(204,136,255,0.3)"/>
+      <text x="42" y="18" font-family="system-ui" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">Observant</text>
+    </g>
+    <g transform="translate(258 14)">
+      <rect width="88" height="28" rx="14" fill="rgba(204,136,255,0.15)" stroke="rgba(204,136,255,0.3)"/>
+      <text x="44" y="18" font-family="system-ui" font-size="11" font-weight="600" text-anchor="middle" fill="#fff">+ Dry wit</text>
+    </g>
+  </g>
+
+  <!-- Backstory preview -->
+  <g transform="translate(40 620)">
+    <rect width="360" height="80" rx="14" fill="url(#card)" stroke="rgba(204,136,255,0.15)"/>
+    <text x="16" y="22" font-family="system-ui" font-size="10" font-weight="700" fill="#cc88ff" letter-spacing="1.5">BACKSTORY</text>
+    <text x="16" y="42" font-family="system-ui" font-size="11" fill="rgba(255,255,255,0.85)">Lost contact with mission control</text>
+    <text x="16" y="58" font-family="system-ui" font-size="11" fill="rgba(255,255,255,0.85)">six months ago. Found you on a</text>
+    <text x="16" y="74" font-family="system-ui" font-size="11" fill="rgba(255,255,255,0.85)">planet that shouldn't exist.</text>
+  </g>
+
+  <!-- Actions -->
+  <g transform="translate(40 720)">
+    <rect width="170" height="50" rx="14" fill="rgba(204,136,255,0.12)" stroke="rgba(204,136,255,0.3)"/>
+    <text x="85" y="32" font-family="system-ui" font-size="13" font-weight="700" text-anchor="middle" fill="#fff">🎲 Re-roll</text>
+  </g>
+  <g transform="translate(230 720)">
+    <rect width="170" height="50" rx="14" fill="url(#primary)"/>
+    <text x="85" y="32" font-family="system-ui" font-size="13" font-weight="800" text-anchor="middle" fill="#0a0218">Begin →</text>
+  </g>
+
+  <text x="220" y="810" font-family="system-ui" font-size="10" fill="rgba(255,255,255,0.4)" text-anchor="middle">Generating 3D model via Meshy · auto-rigging</text>
+
+  <rect x="170" y="850" width="100" height="4" rx="2" fill="#fff" opacity="0.5"/>
+</svg>

@@ -1,0 +1,310 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 900" width="440" height="900">
+  <defs>
+    <linearGradient id="phoneBezel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a1f"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+
+    <!-- ALIEN SKY -->
+    <linearGradient id="alienSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#1a2840"/>
+      <stop offset="35%" stop-color="#5a4870"/>
+      <stop offset="60%" stop-color="#c88a78"/>
+      <stop offset="85%" stop-color="#e8b888"/>
+      <stop offset="100%" stop-color="#a87858"/>
+    </linearGradient>
+
+    <!-- VOLUMETRIC CLOUDS -->
+    <radialGradient id="cloud1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#fff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cloud2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#ffd8a0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffd8a0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- DISTANT MOUNTAINS / GIANT TREE -->
+    <linearGradient id="mtnFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a3850"/>
+      <stop offset="100%" stop-color="#2a1830"/>
+    </linearGradient>
+    <linearGradient id="mtnNear" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a4848"/>
+      <stop offset="100%" stop-color="#2a1818"/>
+    </linearGradient>
+    <radialGradient id="treeCanopy" cx="50%" cy="60%" r="60%">
+      <stop offset="0%" stop-color="#3a4a30"/>
+      <stop offset="60%" stop-color="#1a2818"/>
+      <stop offset="100%" stop-color="#0a1408"/>
+    </radialGradient>
+
+    <!-- WATER / FOREGROUND -->
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7088a8"/>
+      <stop offset="100%" stop-color="#3a4858"/>
+    </linearGradient>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a7838"/>
+      <stop offset="100%" stop-color="#1a2810"/>
+    </linearGradient>
+
+    <!-- COMPANION SUIT (white + orange) -->
+    <linearGradient id="suitWhite" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f3ee"/>
+      <stop offset="100%" stop-color="#b8b4ac"/>
+    </linearGradient>
+    <linearGradient id="suitOrange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9050"/>
+      <stop offset="100%" stop-color="#c85820"/>
+    </linearGradient>
+    <linearGradient id="suitShadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2820" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- SKIN (SSS look) -->
+    <radialGradient id="skinFace" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#f6d8b8"/>
+      <stop offset="60%" stop-color="#e8b894"/>
+      <stop offset="100%" stop-color="#a87858"/>
+    </radialGradient>
+    <radialGradient id="skinHighlight" cx="50%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#fff5e0" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fff5e0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- HAIR -->
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2418"/>
+      <stop offset="50%" stop-color="#1a0c08"/>
+      <stop offset="100%" stop-color="#0a0404"/>
+    </linearGradient>
+
+    <!-- HUD GLASS -->
+    <linearGradient id="hudGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.45)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.25)"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="off"/>
+      <feMerge><feMergeNode in="off"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- PHONE FRAME -->
+  <rect x="0" y="0" width="440" height="900" rx="60" fill="url(#phoneBezel)"/>
+  <rect x="10" y="10" width="420" height="880" rx="50" fill="#000"/>
+
+  <!-- SCREEN CLIP -->
+  <clipPath id="screen"><rect x="20" y="20" width="400" height="860" rx="42"/></clipPath>
+  <g clip-path="url(#screen)">
+
+    <!-- SKY -->
+    <rect x="20" y="20" width="400" height="540" fill="url(#alienSky)"/>
+
+    <!-- VOLUMETRIC CLOUDS -->
+    <ellipse cx="110" cy="180" rx="90" ry="22" fill="url(#cloud1)"/>
+    <ellipse cx="200" cy="220" rx="140" ry="28" fill="url(#cloud2)"/>
+    <ellipse cx="320" cy="160" rx="80" ry="20" fill="url(#cloud1)"/>
+    <ellipse cx="370" cy="240" rx="120" ry="22" fill="url(#cloud2)"/>
+    <ellipse cx="80"  cy="280" rx="100" ry="18" fill="url(#cloud1)" opacity="0.7"/>
+
+    <!-- DISTANT MOUNTAINS -->
+    <polygon points="20,420 70,360 130,400 180,340 260,390 320,360 380,400 420,380 420,460 20,460" fill="url(#mtnFar)" opacity="0.85"/>
+    <polygon points="20,470 80,400 160,440 220,410 300,450 380,420 420,450 420,500 20,500" fill="url(#mtnNear)" opacity="0.9"/>
+
+    <!-- GIANT ALIEN TREE (behind companion, left third) -->
+    <g transform="translate(110 430)">
+      <rect x="-3" y="0" width="6" height="80" fill="#1a0c08"/>
+      <ellipse cx="0" cy="-20" rx="85" ry="55" fill="url(#treeCanopy)"/>
+      <ellipse cx="-30" cy="-30" rx="50" ry="35" fill="url(#treeCanopy)" opacity="0.9"/>
+      <ellipse cx="40" cy="-25" rx="55" ry="35" fill="url(#treeCanopy)" opacity="0.9"/>
+    </g>
+
+    <!-- WATER / LAKE -->
+    <rect x="20" y="500" width="400" height="60" fill="url(#water)" opacity="0.85"/>
+    <!-- Water reflection streaks -->
+    <g opacity="0.4" fill="#fff">
+      <rect x="40"  y="520" width="80" height="1"/>
+      <rect x="160" y="528" width="60" height="1"/>
+      <rect x="260" y="536" width="100" height="1"/>
+      <rect x="320" y="548" width="50" height="1"/>
+    </g>
+
+    <!-- FOREGROUND GRASS / TERRAIN -->
+    <path d="M 20 560 Q 100 540 200 555 Q 300 570 420 555 L 420 880 L 20 880 Z" fill="url(#grass)"/>
+    <!-- Grass tufts -->
+    <g fill="#3a5828" opacity="0.7">
+      <polygon points="30,580 35,565 40,580"/>
+      <polygon points="55,590 60,572 65,590"/>
+      <polygon points="380,575 385,560 390,575"/>
+      <polygon points="400,585 405,568 410,585"/>
+    </g>
+
+    <!-- ============= COMPANION (Stella-inspired, over-shoulder framing) ============= -->
+    <g transform="translate(220 460)" filter="url(#softShadow)">
+      <!-- Suit body (visible torso, hips up) -->
+      <path d="M -60 100 Q -75 200 -65 320 L 75 320 Q 90 220 65 100 Z" fill="url(#suitWhite)"/>
+      <!-- Orange chest piece -->
+      <path d="M -38 110 Q -42 170 -30 240 L 30 240 Q 42 170 38 110 Z" fill="url(#suitOrange)"/>
+      <!-- Shoulder pads -->
+      <ellipse cx="-58" cy="110" rx="20" ry="14" fill="url(#suitWhite)" stroke="#7a7268" stroke-width="0.5"/>
+      <ellipse cx="58" cy="110" rx="20" ry="14" fill="url(#suitWhite)" stroke="#7a7268" stroke-width="0.5"/>
+      <!-- Orange shoulder accents -->
+      <ellipse cx="-58" cy="115" rx="10" ry="6" fill="url(#suitOrange)"/>
+      <ellipse cx="58" cy="115" rx="10" ry="6" fill="url(#suitOrange)"/>
+      <!-- Mission patch -->
+      <rect x="-50" y="135" width="14" height="10" fill="#c85820"/>
+      <rect x="-48" y="137" width="10" height="6" fill="#f5f3ee"/>
+      <!-- Suit seam/zip down center -->
+      <line x1="0" y1="110" x2="0" y2="240" stroke="#7a6450" stroke-width="0.8"/>
+      <!-- Helmet ring / collar -->
+      <ellipse cx="0" cy="80" rx="40" ry="14" fill="#3a3530"/>
+      <ellipse cx="0" cy="78" rx="38" ry="10" fill="#5a5450"/>
+      <!-- Orange collar trim -->
+      <path d="M -38 78 Q 0 70 38 78 L 38 84 Q 0 76 -38 84 Z" fill="url(#suitOrange)"/>
+      <!-- Suit shadow under helmet -->
+      <ellipse cx="0" cy="90" rx="34" ry="8" fill="url(#suitShadow)" opacity="0.5"/>
+
+      <!-- NECK -->
+      <rect x="-10" y="55" width="20" height="25" fill="url(#skinFace)"/>
+      <ellipse cx="0" cy="78" rx="11" ry="3" fill="#a87858" opacity="0.7"/>
+
+      <!-- HEAD (face shape) -->
+      <ellipse cx="0" cy="20" rx="36" ry="44" fill="url(#skinFace)"/>
+      <!-- SSS highlight on forehead/cheekbones -->
+      <ellipse cx="-8" cy="-2" rx="18" ry="20" fill="url(#skinHighlight)"/>
+      <ellipse cx="14" cy="14" rx="10" ry="8" fill="#fff5e0" opacity="0.25"/>
+
+      <!-- HAIR (dark, swept) -->
+      <path d="M -36 -10 Q -40 -32 -20 -42 Q 0 -50 22 -42 Q 38 -32 38 -8 Q 36 -16 30 -22 Q 18 -32 0 -32 Q -16 -32 -28 -22 Q -34 -16 -36 -10 Z" fill="url(#hair)"/>
+      <!-- Hair side strands -->
+      <path d="M -36 -12 Q -42 10 -36 28 Q -32 12 -32 -8 Z" fill="url(#hair)"/>
+      <path d="M 36 -10 Q 42 14 36 32 Q 34 14 34 -6 Z" fill="url(#hair)"/>
+      <!-- Hair fringe sweep across forehead -->
+      <path d="M -30 -10 Q -10 -18 18 -10 Q 26 -6 28 -14 Q 14 -22 -8 -20 Q -22 -16 -30 -10 Z" fill="#1a0c08"/>
+
+      <!-- EYEBROWS -->
+      <path d="M -22 -2 Q -12 -6 -2 -2" stroke="#1a0c08" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M 4 -2 Q 14 -6 22 -2" stroke="#1a0c08" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+      <!-- EYES (with iris + sclera + highlight) -->
+      <g transform="translate(-13 7)">
+        <ellipse cx="0" cy="0" rx="6" ry="3.5" fill="#fff8ee"/>
+        <circle cx="-0.5" cy="0" r="3" fill="#5a3818"/>
+        <circle cx="-0.5" cy="0" r="1.3" fill="#0a0404"/>
+        <circle cx="0.6" cy="-1" r="0.9" fill="#fff" opacity="0.95"/>
+      </g>
+      <g transform="translate(13 7)">
+        <ellipse cx="0" cy="0" rx="6" ry="3.5" fill="#fff8ee"/>
+        <circle cx="0.5" cy="0" r="3" fill="#5a3818"/>
+        <circle cx="0.5" cy="0" r="1.3" fill="#0a0404"/>
+        <circle cx="1.5" cy="-1" r="0.9" fill="#fff" opacity="0.95"/>
+      </g>
+      <!-- Lash hint -->
+      <path d="M -19 5 Q -13 3 -7 5" stroke="#0a0404" stroke-width="0.6" fill="none"/>
+      <path d="M 7 5 Q 13 3 19 5" stroke="#0a0404" stroke-width="0.6" fill="none"/>
+
+      <!-- NOSE -->
+      <path d="M -2 12 Q 0 22 -3 28 Q -1 32 2 28 Q 4 22 2 12 Z" fill="#d8a888" opacity="0.6"/>
+      <ellipse cx="-2" cy="30" rx="1.2" ry="0.7" fill="#a87858" opacity="0.7"/>
+      <ellipse cx="2"  cy="30" rx="1.2" ry="0.7" fill="#a87858" opacity="0.7"/>
+
+      <!-- MOUTH (slightly open, mid-speech) -->
+      <path d="M -7 42 Q 0 47 7 42 Q 0 50 -7 42 Z" fill="#a85848"/>
+      <path d="M -6 42 Q 0 44 6 42" stroke="#7a3828" stroke-width="0.6" fill="none"/>
+      <ellipse cx="0" cy="45" rx="4" ry="0.8" fill="#1a0808"/>
+
+      <!-- CHIN highlight -->
+      <ellipse cx="0" cy="52" rx="8" ry="3" fill="#fff5e0" opacity="0.2"/>
+
+      <!-- BREATHING-LIGHT mic indicator on collar -->
+      <circle cx="20" cy="78" r="2.5" fill="#88dd66"/>
+      <circle cx="20" cy="78" r="4" fill="none" stroke="#88dd66" stroke-opacity="0.5" stroke-width="0.5"/>
+    </g>
+
+    <!-- DUST PARTICLES / LIGHT MOTES -->
+    <g fill="#ffe0b0" opacity="0.6">
+      <circle cx="60" cy="320" r="1.2"/>
+      <circle cx="150" cy="280" r="0.8"/>
+      <circle cx="280" cy="340" r="1"/>
+      <circle cx="350" cy="300" r="1.3"/>
+      <circle cx="100" cy="400" r="0.9"/>
+      <circle cx="380" cy="430" r="1"/>
+    </g>
+  </g>
+
+  <!-- STATUS BAR -->
+  <text x="50" y="55" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#fff" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.6))">9:42</text>
+  <g transform="translate(360 42)">
+    <rect width="18" height="11" rx="2" fill="none" stroke="#fff" stroke-width="1"/>
+    <rect x="2" y="2" width="14" height="7" fill="#fff"/>
+    <rect x="20" y="1" width="2" height="9" rx="1" fill="#fff"/>
+  </g>
+  <rect x="170" y="35" width="100" height="28" rx="14" fill="#000"/>
+
+  <!-- TOP-LEFT WORLD INFO (weather + planet) -->
+  <g transform="translate(40 92)" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.5))">
+    <text x="0" y="14" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="-1">🌡 64°F</text>
+    <text x="0" y="34" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff" letter-spacing="1.5">GAIA</text>
+  </g>
+
+  <!-- TOP-RIGHT SETTINGS GEAR -->
+  <g transform="translate(380 100)">
+    <circle cx="0" cy="0" r="18" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.3)"/>
+    <text x="0" y="5" font-family="system-ui,sans-serif" font-size="16" fill="#fff" text-anchor="middle">⚙</text>
+  </g>
+
+  <!-- AI STATUS BADGE (top-right under gear, color-coded S-tier violet) -->
+  <g transform="translate(280 132)" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.5))">
+    <rect width="118" height="22" rx="11" fill="rgba(0,0,0,0.55)" stroke="#cc88ff"/>
+    <circle cx="14" cy="11" r="4" fill="#cc88ff"/>
+    <text x="22" y="15" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#fff">Claude Opus 4.7</text>
+  </g>
+
+  <!-- SUBTITLE BUBBLE (companion speaking) -->
+  <g transform="translate(36 720)" filter="drop-shadow(0 4px 16px rgba(0,0,0,0.7))">
+    <rect width="368" height="58" rx="14" fill="url(#hudGlass)" stroke="rgba(204,136,255,0.5)" stroke-width="1"/>
+    <text x="16" y="22" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#cc88ff" letter-spacing="1.2">STELLA · COMPANION</text>
+    <text x="16" y="42" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#fff">Do you hear that wind through</text>
+    <text x="16" y="54" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#fff">the canopy? Feels like a song.</text>
+  </g>
+
+  <!-- WAVEFORM + MIC -->
+  <g transform="translate(36 796)">
+    <rect width="280" height="44" rx="22" fill="rgba(0,0,0,0.6)" stroke="rgba(204,136,255,0.4)"/>
+    <g fill="#cc88ff">
+      <rect x="16" y="20" width="2" height="4" rx="1"/><rect x="22" y="14" width="2" height="16" rx="1"/>
+      <rect x="28" y="10" width="2" height="24" rx="1"/><rect x="34" y="6" width="2" height="32" rx="1"/>
+      <rect x="40" y="12" width="2" height="20" rx="1"/><rect x="46" y="8" width="2" height="28" rx="1"/>
+      <rect x="52" y="14" width="2" height="16" rx="1"/><rect x="58" y="6" width="2" height="32" rx="1"/>
+      <rect x="64" y="18" width="2" height="8" rx="1"/><rect x="70" y="12" width="2" height="20" rx="1"/>
+      <rect x="76" y="8" width="2" height="28" rx="1"/><rect x="82" y="14" width="2" height="16" rx="1"/>
+      <rect x="88" y="20" width="2" height="4" rx="1"/><rect x="94" y="10" width="2" height="24" rx="1"/>
+      <rect x="100" y="6" width="2" height="32" rx="1"/><rect x="106" y="14" width="2" height="16" rx="1"/>
+      <rect x="112" y="18" width="2" height="8" rx="1"/><rect x="118" y="12" width="2" height="20" rx="1"/>
+      <rect x="124" y="8" width="2" height="28" rx="1"/><rect x="130" y="14" width="2" height="16" rx="1"/>
+      <rect x="136" y="20" width="2" height="4" rx="1"/><rect x="142" y="16" width="2" height="12" rx="1"/>
+      <rect x="148" y="10" width="2" height="24" rx="1"/><rect x="154" y="6" width="2" height="32" rx="1"/>
+      <rect x="160" y="14" width="2" height="16" rx="1"/><rect x="166" y="18" width="2" height="8" rx="1"/>
+      <rect x="172" y="12" width="2" height="20" rx="1"/><rect x="178" y="8" width="2" height="28" rx="1"/>
+      <rect x="184" y="14" width="2" height="16" rx="1"/><rect x="190" y="20" width="2" height="4" rx="1"/>
+      <rect x="196" y="16" width="2" height="12" rx="1"/><rect x="202" y="10" width="2" height="24" rx="1"/>
+      <rect x="208" y="14" width="2" height="16" rx="1"/>
+    </g>
+    <text x="240" y="28" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#cc88ff" letter-spacing="1">LIVE</text>
+  </g>
+  <g transform="translate(346 796)">
+    <circle cx="22" cy="22" r="22" fill="#cc88ff"/>
+    <circle cx="22" cy="22" r="22" fill="none" stroke="#fff" stroke-opacity="0.4" stroke-width="2"/>
+    <rect x="17" y="12" width="10" height="16" rx="5" fill="#1a0a2a"/>
+    <path d="M 14 22 Q 14 30 22 30 Q 30 30 30 22" fill="none" stroke="#1a0a2a" stroke-width="2"/>
+    <line x1="22" y1="30" x2="22" y2="34" stroke="#1a0a2a" stroke-width="2"/>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="170" y="850" width="100" height="4" rx="2" fill="#fff" opacity="0.5"/>
+</svg>

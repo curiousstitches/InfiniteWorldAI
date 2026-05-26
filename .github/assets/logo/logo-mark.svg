@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="void" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cc88ff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#7a3acc" stop-opacity="0.8"/>
+      <stop offset="80%" stop-color="#1a0a3a" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#000005" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#cc88ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7a3acc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <!-- Outer ring of light -->
+  <circle cx="128" cy="128" r="120" fill="none" stroke="#cc88ff" stroke-width="0.4" stroke-opacity="0.25"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#cc88ff" stroke-width="0.6" stroke-opacity="0.15"/>
+
+  <!-- Twin portals forming an infinity -->
+  <g transform="translate(128 128)">
+    <ellipse cx="-32" cy="0" rx="44" ry="44" fill="url(#void)"/>
+    <ellipse cx="32" cy="0" rx="44" ry="44" fill="url(#void)"/>
+
+    <!-- Light glow at portal centers -->
+    <circle cx="-32" cy="0" r="14" fill="url(#glow)" filter="url(#soft)"/>
+    <circle cx="32" cy="0" r="14" fill="url(#glow)" filter="url(#soft)"/>
+
+    <!-- Connecting energy band -->
+    <path d="M -32 0 Q 0 -22 32 0 Q 0 22 -32 0 Z"
+          fill="none" stroke="#cc88ff" stroke-width="1.5" stroke-opacity="0.7"/>
+    <path d="M -32 0 Q 0 -28 32 0 Q 0 28 -32 0 Z"
+          fill="none" stroke="#aa66ff" stroke-width="0.6" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Scattered particles for atmosphere -->
+  <g fill="#ffffff" opacity="0.8">
+    <circle cx="60" cy="50" r="0.8"/>
+    <circle cx="200" cy="60" r="1.0"/>
+    <circle cx="80" cy="200" r="0.9"/>
+    <circle cx="210" cy="190" r="0.7"/>
+    <circle cx="40" cy="130" r="0.6"/>
+    <circle cx="225" cy="120" r="0.8"/>
+    <circle cx="160" cy="40" r="0.5"/>
+    <circle cx="100" cy="220" r="0.6"/>
+  </g>
+</svg>

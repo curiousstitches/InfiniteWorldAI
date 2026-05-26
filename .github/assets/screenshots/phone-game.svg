@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 900" width="440" height="900">
+  <defs>
+    <linearGradient id="bz" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1a1f"/><stop offset="100%" stop-color="#0a0a0f"/></linearGradient>
+
+    <!-- Forest biome sky -->
+    <linearGradient id="forestSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a78"/>
+      <stop offset="40%" stop-color="#88a8a0"/>
+      <stop offset="70%" stop-color="#cfdaa0"/>
+      <stop offset="100%" stop-color="#a8b878"/>
+    </linearGradient>
+
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8dc"/>
+      <stop offset="40%" stop-color="#ffd890" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffd890" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Canopy trees -->
+    <radialGradient id="canopy" cx="50%" cy="60%" r="60%">
+      <stop offset="0%" stop-color="#5a7a3a"/>
+      <stop offset="60%" stop-color="#2a4818"/>
+      <stop offset="100%" stop-color="#102008"/>
+    </radialGradient>
+    <radialGradient id="canopyFar" cx="50%" cy="60%" r="60%">
+      <stop offset="0%" stop-color="#6a8a5a"/>
+      <stop offset="60%" stop-color="#4a6838"/>
+      <stop offset="100%" stop-color="#283820"/>
+    </radialGradient>
+
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a8038"/>
+      <stop offset="100%" stop-color="#1a2810"/>
+    </linearGradient>
+
+    <radialGradient id="skinFace" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#f6d8b8"/>
+      <stop offset="60%" stop-color="#d8ac88"/>
+      <stop offset="100%" stop-color="#a87858"/>
+    </radialGradient>
+
+    <linearGradient id="suitWhite" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f3ee"/>
+      <stop offset="100%" stop-color="#b8b4ac"/>
+    </linearGradient>
+
+    <linearGradient id="suitOrange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9050"/>
+      <stop offset="100%" stop-color="#c85820"/>
+    </linearGradient>
+
+    <linearGradient id="hudGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.45)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.25)"/>
+    </linearGradient>
+
+    <filter id="dof" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+    <filter id="dofHard" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="440" height="900" rx="60" fill="url(#bz)"/>
+  <rect x="10" y="10" width="420" height="880" rx="50" fill="#000"/>
+
+  <clipPath id="screen"><rect x="20" y="20" width="400" height="860" rx="42"/></clipPath>
+  <g clip-path="url(#screen)">
+    <!-- SKY -->
+    <rect x="20" y="20" width="400" height="380" fill="url(#forestSky)"/>
+
+    <!-- Sun -->
+    <circle cx="120" cy="180" r="60" fill="url(#sunGlow)"/>
+    <circle cx="120" cy="180" r="22" fill="#fff8dc"/>
+
+    <!-- Distant canopy line (DOF blurred) -->
+    <g filter="url(#dofHard)" opacity="0.85">
+      <ellipse cx="60" cy="340" rx="80" ry="40" fill="url(#canopyFar)"/>
+      <ellipse cx="160" cy="320" rx="100" ry="50" fill="url(#canopyFar)"/>
+      <ellipse cx="280" cy="335" rx="90" ry="45" fill="url(#canopyFar)"/>
+      <ellipse cx="380" cy="345" rx="70" ry="35" fill="url(#canopyFar)"/>
+    </g>
+
+    <!-- Mid canopy (slight DOF) -->
+    <g filter="url(#dof)" opacity="0.92">
+      <ellipse cx="50" cy="380" rx="80" ry="35" fill="url(#canopy)"/>
+      <ellipse cx="380" cy="385" rx="90" ry="38" fill="url(#canopy)"/>
+    </g>
+
+    <!-- Foreground tree silhouettes left/right (in focus) -->
+    <g>
+      <rect x="25" y="380" width="14" height="280" fill="#1a0c08"/>
+      <ellipse cx="32" cy="370" rx="60" ry="80" fill="url(#canopy)"/>
+      <ellipse cx="20" cy="400" rx="40" ry="60" fill="url(#canopy)"/>
+
+      <rect x="400" y="370" width="14" height="280" fill="#1a0c08"/>
+      <ellipse cx="408" cy="360" rx="60" ry="80" fill="url(#canopy)"/>
+      <ellipse cx="420" cy="390" rx="40" ry="60" fill="url(#canopy)"/>
+    </g>
+
+    <!-- Light shafts through canopy (god rays) -->
+    <g opacity="0.25">
+      <polygon points="100,200 80,500 140,500" fill="#fff8dc"/>
+      <polygon points="180,180 160,500 220,500" fill="#fff8dc"/>
+      <polygon points="260,210 240,500 300,500" fill="#fff8dc"/>
+      <polygon points="340,200 320,500 380,500" fill="#fff8dc"/>
+    </g>
+
+    <!-- Ground plane -->
+    <path d="M 20 540 Q 100 520 220 535 Q 340 550 420 530 L 420 880 L 20 880 Z" fill="url(#grass)"/>
+
+    <!-- Grass tufts -->
+    <g fill="#3a5828" opacity="0.7">
+      <polygon points="60,565 65,548 70,565"/>
+      <polygon points="100,575 105,556 110,575"/>
+      <polygon points="350,560 355,544 360,560"/>
+      <polygon points="380,570 385,552 390,570"/>
+      <polygon points="280,580 285,562 290,580"/>
+      <polygon points="220,590 225,572 230,590"/>
+    </g>
+
+    <!-- Path / trail -->
+    <path d="M 180 880 Q 200 700 220 540 L 240 540 Q 230 700 220 880 Z" fill="#5a4830" opacity="0.6"/>
+
+    <!-- Mushrooms (glowing, mushroom forest hint) -->
+    <g transform="translate(140 600)">
+      <rect x="-2" y="0" width="4" height="14" fill="#5a4a6a"/>
+      <ellipse cx="0" cy="-2" rx="10" ry="6" fill="#cc88ff" opacity="0.85"/>
+      <ellipse cx="0" cy="-3" rx="6" ry="3" fill="#ffaaff" opacity="0.6"/>
+    </g>
+    <g transform="translate(320 620)">
+      <rect x="-2" y="0" width="4" height="14" fill="#5a4a6a"/>
+      <ellipse cx="0" cy="-2" rx="12" ry="7" fill="#88ddff" opacity="0.85"/>
+      <ellipse cx="0" cy="-3" rx="7" ry="3.5" fill="#aaeeff" opacity="0.6"/>
+    </g>
+    <g transform="translate(95 640)">
+      <rect x="-1.5" y="0" width="3" height="10" fill="#5a4a6a"/>
+      <ellipse cx="0" cy="-1" rx="7" ry="4" fill="#cc88ff" opacity="0.85"/>
+    </g>
+
+    <!-- ============= COMPANION (third-person, ahead on path, walking away/turning back) ============= -->
+    <g transform="translate(220 540) scale(0.65)">
+      <!-- Suit body -->
+      <path d="M -55 100 Q -68 200 -60 320 L 70 320 Q 82 220 60 100 Z" fill="url(#suitWhite)"/>
+      <path d="M -35 110 Q -38 170 -28 240 L 28 240 Q 38 170 35 110 Z" fill="url(#suitOrange)"/>
+      <ellipse cx="-52" cy="110" rx="18" ry="12" fill="url(#suitWhite)"/>
+      <ellipse cx="52" cy="110" rx="18" ry="12" fill="url(#suitWhite)"/>
+      <ellipse cx="-52" cy="115" rx="9" ry="5" fill="url(#suitOrange)"/>
+      <ellipse cx="52" cy="115" rx="9" ry="5" fill="url(#suitOrange)"/>
+
+      <!-- Suit seam -->
+      <line x1="0" y1="110" x2="0" y2="240" stroke="#7a6450" stroke-width="0.8"/>
+
+      <!-- Collar -->
+      <ellipse cx="0" cy="80" rx="35" ry="12" fill="#3a3530"/>
+      <ellipse cx="0" cy="78" rx="33" ry="9" fill="#5a5450"/>
+      <path d="M -33 78 Q 0 70 33 78 L 33 84 Q 0 76 -33 84 Z" fill="url(#suitOrange)"/>
+
+      <!-- Neck -->
+      <rect x="-9" y="55" width="18" height="25" fill="url(#skinFace)"/>
+
+      <!-- Head turned slightly -->
+      <ellipse cx="0" cy="20" rx="32" ry="40" fill="url(#skinFace)"/>
+      <ellipse cx="-6" cy="-2" rx="16" ry="18" fill="#fff5e0" opacity="0.25"/>
+
+      <!-- Hair -->
+      <path d="M -32 -10 Q -36 -32 -18 -42 Q 0 -50 20 -42 Q 34 -32 34 -8 Q 32 -16 26 -22 Q 16 -32 0 -32 Q -14 -32 -24 -22 Q -30 -16 -32 -10 Z" fill="#1a0c08"/>
+      <path d="M -28 -10 Q -8 -18 16 -10 Q 24 -6 26 -14 Q 12 -22 -6 -20 Q -20 -16 -28 -10 Z" fill="#0a0404"/>
+
+      <!-- Brows -->
+      <path d="M -20 -2 Q -10 -6 -1 -2" stroke="#1a0c08" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M 3 -2 Q 12 -6 20 -2" stroke="#1a0c08" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+      <!-- Eyes (smiling, looking back) -->
+      <g transform="translate(-12 7)">
+        <ellipse rx="5" ry="3" fill="#fff8ee"/>
+        <circle r="2.5" fill="#5a3818"/>
+        <circle r="1.1" fill="#0a0404"/>
+        <circle cx="0.6" cy="-1" r="0.7" fill="#fff"/>
+      </g>
+      <g transform="translate(12 7)">
+        <ellipse rx="5" ry="3" fill="#fff8ee"/>
+        <circle r="2.5" fill="#5a3818"/>
+        <circle r="1.1" fill="#0a0404"/>
+        <circle cx="0.6" cy="-1" r="0.7" fill="#fff"/>
+      </g>
+
+      <!-- Nose -->
+      <path d="M -2 12 Q 0 20 -2 26 Q 0 28 2 26 Q 4 20 2 12 Z" fill="#c89878" opacity="0.55"/>
+
+      <!-- Smile -->
+      <path d="M -6 40 Q 0 46 6 40" stroke="#a85848" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- Dust motes in light shafts -->
+    <g fill="#fff8dc" opacity="0.55">
+      <circle cx="80" cy="380" r="0.8"/>
+      <circle cx="150" cy="420" r="1"/>
+      <circle cx="200" cy="350" r="0.7"/>
+      <circle cx="280" cy="400" r="0.9"/>
+      <circle cx="340" cy="380" r="1.1"/>
+      <circle cx="120" cy="450" r="0.8"/>
+    </g>
+  </g>
+
+  <!-- STATUS BAR -->
+  <text x="50" y="55" font-family="system-ui" font-size="13" font-weight="700" fill="#fff">9:42</text>
+  <rect x="170" y="35" width="100" height="28" rx="14" fill="#000"/>
+  <g transform="translate(360 42)">
+    <rect width="18" height="11" rx="2" fill="none" stroke="#fff"/>
+    <rect x="2" y="2" width="14" height="7" fill="#fff"/>
+    <rect x="20" y="1" width="2" height="9" rx="1" fill="#fff"/>
+  </g>
+
+  <!-- TOP-LEFT WORLD INFO -->
+  <g transform="translate(40 100)" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.5))">
+    <text x="0" y="14" font-family="system-ui" font-size="20" font-weight="800" fill="#fff" letter-spacing="-0.5">🌳 72°F</text>
+    <text x="0" y="32" font-family="system-ui" font-size="10" font-weight="700" fill="#fff" letter-spacing="1.5">MOSSBLOOM · FOREST</text>
+  </g>
+
+  <!-- TOP-RIGHT settings + AI badge -->
+  <g transform="translate(380 110)">
+    <circle r="18" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.3)"/>
+    <text x="0" y="5" font-family="system-ui" font-size="16" fill="#fff" text-anchor="middle">⚙</text>
+  </g>
+  <g transform="translate(248 140)" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.5))">
+    <rect width="118" height="22" rx="11" fill="rgba(0,0,0,0.55)" stroke="#88ddff"/>
+    <circle cx="14" cy="11" r="4" fill="#88ddff"/>
+    <text x="22" y="15" font-family="system-ui" font-size="9" font-weight="700" fill="#fff">Gemini 2.5 Pro</text>
+  </g>
+
+  <!-- HINT BANNER -->
+  <g transform="translate(36 720)" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.6))">
+    <rect width="368" height="40" rx="20" fill="url(#hudGlass)" stroke="rgba(204,136,255,0.4)"/>
+    <text x="20" y="25" font-family="system-ui" font-size="12" font-weight="600" fill="#fff">Briar found something. Catch up to her →</text>
+  </g>
+
+  <!-- Voice mic button -->
+  <g transform="translate(180 790)" filter="drop-shadow(0 4px 16px rgba(204,136,255,0.6))">
+    <circle r="40" fill="#cc88ff"/>
+    <circle r="40" fill="none" stroke="#fff" stroke-opacity="0.4" stroke-width="2"/>
+    <rect x="-8" y="-14" width="16" height="22" rx="8" fill="#1a0a2a"/>
+    <path d="M -14 0 Q -14 14 0 14 Q 14 14 14 0" fill="none" stroke="#1a0a2a" stroke-width="3"/>
+    <line x1="0" y1="14" x2="0" y2="22" stroke="#1a0a2a" stroke-width="3"/>
+  </g>
+
+  <text x="220" y="852" font-family="system-ui" font-size="10" font-weight="600" fill="#fff" text-anchor="middle" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.6))">Hold to speak · Tap for menu</text>
+
+  <rect x="170" y="864" width="100" height="4" rx="2" fill="#fff" opacity="0.5"/>
+</svg>

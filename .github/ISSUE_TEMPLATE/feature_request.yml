@@ -1,0 +1,55 @@
+name: ✨ Feature Request
+description: Suggest a new piece of reality.
+title: "[Feat]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got an idea? Tell us what world it lives in.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - New biome
+        - New scale level
+        - Voice / Audio
+        - Companion AI behavior
+        - 3D rendering / visuals
+        - Task system
+        - UI / UX
+        - Performance
+        - Developer experience
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's missing?
+      description: What problem does this solve, or what experience does it unlock?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Be as detailed as you like. Pseudo-code, sketches, references all welcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What else have you thought of?
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Reference examples
+      description: Links to similar features in other projects, papers, games, demos

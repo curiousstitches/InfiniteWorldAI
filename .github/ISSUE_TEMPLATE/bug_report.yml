@@ -1,0 +1,94 @@
+name: 🐛 Bug Report
+description: Something broke in the infinite. Help us patch reality.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Be specific — the more we know, the faster we fix.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of what went wrong.
+      placeholder: When I shrunk down to NANO scale, the terrain disappeared and the screen turned black.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: I expected the terrain to morph into cellular structures.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1. Created a new world
+        2. Said "..."
+        3. Companion responded with "..."
+        4. Then ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome (desktop)
+        - Chrome (mobile)
+        - Safari (desktop)
+        - Safari (mobile / iOS)
+        - Firefox
+        - Edge
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: renderer
+    attributes:
+      label: Renderer (check chrome://gpu or about:support)
+      options:
+        - WebGPU
+        - WebGL2
+        - Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Browser console errors
+      description: Open DevTools → Console, copy the full stack trace
+      render: shell
+
+  - type: textarea
+    id: server
+    attributes:
+      label: Server logs (if relevant)
+      render: shell
+
+  - type: textarea
+    id: world-state
+    attributes:
+      label: World state JSON
+      description: From `/api/worlds/<id>` if you can grab it
+      render: json
+
+  - type: checkboxes
+    id: confirms
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues
+          required: true
+        - label: I'm on the latest `main` branch
+          required: true

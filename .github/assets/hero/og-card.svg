@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <radialGradient id="ogBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a0a3a"/>
+      <stop offset="50%" stop-color="#0a0518"/>
+      <stop offset="100%" stop-color="#000005"/>
+    </radialGradient>
+    <radialGradient id="ogNeb" cx="80%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#7a3acc" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7a3acc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ogNeb2" cx="15%" cy="75%" r="35%">
+      <stop offset="0%" stop-color="#ff44aa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff44aa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ogVoid" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cc88ff" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#7a3acc" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#000"/>
+    </radialGradient>
+    <linearGradient id="ogWm" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#e0c8ff"/>
+      <stop offset="100%" stop-color="#cc88ff"/>
+    </linearGradient>
+    <filter id="ogGlow"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#ogBg)"/>
+  <rect width="1280" height="640" fill="url(#ogNeb)"/>
+  <rect width="1280" height="640" fill="url(#ogNeb2)"/>
+
+  <!-- Stars -->
+  <g fill="#ffffff">
+    <circle cx="100" cy="80" r="1.4" opacity="0.95"/>
+    <circle cx="250" cy="120" r="0.8" opacity="0.8"/>
+    <circle cx="450" cy="60" r="1.0" opacity="0.9"/>
+    <circle cx="650" cy="140" r="0.7" opacity="0.75"/>
+    <circle cx="850" cy="90" r="1.2" opacity="0.95"/>
+    <circle cx="1050" cy="130" r="0.6" opacity="0.7"/>
+    <circle cx="1180" cy="80" r="1.0" opacity="0.9"/>
+    <circle cx="150" cy="220" r="0.7" opacity="0.8"/>
+    <circle cx="380" cy="260" r="1.1" opacity="0.9"/>
+    <circle cx="600" cy="240" r="0.5" opacity="0.7"/>
+    <circle cx="820" cy="280" r="0.9" opacity="0.85"/>
+    <circle cx="1100" cy="220" r="1.3" opacity="0.95"/>
+    <circle cx="80" cy="380" r="0.8" opacity="0.85"/>
+    <circle cx="300" cy="420" r="0.6" opacity="0.75"/>
+    <circle cx="500" cy="450" r="1.0" opacity="0.9"/>
+    <circle cx="720" cy="410" r="0.7" opacity="0.8"/>
+    <circle cx="950" cy="440" r="1.1" opacity="0.9"/>
+    <circle cx="1180" cy="400" r="0.6" opacity="0.75"/>
+    <circle cx="180" cy="540" r="0.9" opacity="0.85"/>
+    <circle cx="430" cy="580" r="0.7" opacity="0.8"/>
+    <circle cx="680" cy="560" r="1.2" opacity="0.95"/>
+    <circle cx="900" cy="600" r="0.6" opacity="0.75"/>
+    <circle cx="1150" cy="560" r="0.9" opacity="0.85"/>
+  </g>
+
+  <!-- Logo mark -->
+  <g transform="translate(640 280)" filter="url(#ogGlow)">
+    <ellipse cx="-50" cy="0" rx="65" ry="65" fill="url(#ogVoid)"/>
+    <ellipse cx="50" cy="0" rx="65" ry="65" fill="url(#ogVoid)"/>
+    <circle cx="-50" cy="0" r="22" fill="#ffffff" opacity="0.6"/>
+    <circle cx="50" cy="0" r="22" fill="#ffffff" opacity="0.6"/>
+    <path d="M -50 0 Q 0 -35 50 0 Q 0 35 -50 0 Z" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.85"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="640" y="450" text-anchor="middle" font-family="Cinzel Decorative, serif"
+        font-weight="900" font-size="64" letter-spacing="8" fill="url(#ogWm)">INFINITEWORLDS</text>
+
+  <text x="640" y="490" text-anchor="middle" font-family="Crimson Pro, serif"
+        font-style="italic" font-size="22" letter-spacing="6" fill="#aa88dd" opacity="0.85">
+    EVERY · WORD · RESHAPES · REALITY
+  </text>
+
+  <!-- Bottom subtle text -->
+  <text x="640" y="580" text-anchor="middle" font-family="Crimson Pro, serif"
+        font-style="italic" font-size="16" fill="#7a5a99">
+    An AI-driven voice-interactive infinite world engine · Open source
+  </text>
+</svg>

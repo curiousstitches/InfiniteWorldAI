@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 900" width="440" height="900">
+  <defs>
+    <linearGradient id="phoneBezel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a1f"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+    <radialGradient id="bgR" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#1a0a2e"/>
+      <stop offset="100%" stop-color="#050008"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cc88ff"/>
+      <stop offset="100%" stop-color="#7a3acc"/>
+    </linearGradient>
+    <linearGradient id="sliderTrack" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cc88ff"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.15)"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="440" height="900" rx="60" fill="url(#phoneBezel)"/>
+  <rect x="10" y="10" width="420" height="880" rx="50" fill="#000"/>
+  <rect x="20" y="20" width="400" height="860" rx="42" fill="url(#bgR)"/>
+
+  <!-- Status bar -->
+  <text x="50" y="55" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#fff">9:42</text>
+  <g transform="translate(360 42)">
+    <rect width="18" height="11" rx="2" fill="none" stroke="#fff" stroke-width="1"/>
+    <rect x="2" y="2" width="14" height="7" fill="#fff"/>
+    <rect x="20" y="1" width="2" height="9" rx="1" fill="#fff"/>
+  </g>
+  <rect x="170" y="35" width="100" height="28" rx="14" fill="#000"/>
+
+  <!-- Header -->
+  <g transform="translate(40 90)">
+    <text x="0" y="14" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#cc88ff" letter-spacing="2">SETTINGS</text>
+    <circle cx="320" cy="6" r="16" fill="none" stroke="rgba(204,136,255,0.4)"/>
+    <text x="320" y="11" font-family="system-ui,sans-serif" font-size="16" fill="#f0e8ff" text-anchor="middle">×</text>
+  </g>
+
+  <!-- Tabs (Personality active) -->
+  <g transform="translate(40 122)">
+    <rect width="113" height="34" rx="8" fill="rgba(204,136,255,0.08)"/>
+    <text x="56" y="22" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#f0e8ff" text-anchor="middle">🔑 API</text>
+    <rect x="121" width="113" height="34" rx="8" fill="url(#accent)"/>
+    <text x="177" y="22" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#0a0218" text-anchor="middle">🧠 Personality</text>
+    <rect x="242" width="113" height="34" rx="8" fill="rgba(204,136,255,0.08)"/>
+    <text x="298" y="22" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#f0e8ff" text-anchor="middle">✨ Interface</text>
+  </g>
+
+  <!-- Basic / Detailed toggle -->
+  <g transform="translate(40 175)">
+    <rect width="360" height="42" rx="12" fill="rgba(0,0,0,0.4)" stroke="rgba(204,136,255,0.25)"/>
+    <rect x="4" y="4" width="174" height="34" rx="8" fill="rgba(204,136,255,0.08)"/>
+    <text x="91" y="26" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#f0e8ff" text-anchor="middle">Basic</text>
+    <rect x="182" y="4" width="174" height="34" rx="8" fill="url(#accent)"/>
+    <text x="269" y="26" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#0a0218" text-anchor="middle">Detailed</text>
+  </g>
+
+  <!-- MASTER RANDOMIZER -->
+  <g transform="translate(40 230)">
+    <rect width="360" height="46" rx="12" fill="url(#accent)"/>
+    <text x="180" y="29" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#0a0218" text-anchor="middle" letter-spacing="1">🎲  RANDOMIZE ENTIRE PERSONALITY</text>
+  </g>
+
+  <!-- Identity section -->
+  <g transform="translate(40 290)">
+    <rect width="360" height="120" rx="14" fill="rgba(204,136,255,0.06)" stroke="rgba(204,136,255,0.2)"/>
+    <text x="16" y="22" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#cc88ff" letter-spacing="0.5">Identity <tspan font-size="8" fill="rgba(240,232,255,0.4)">BASIC</tspan></text>
+    <rect x="280" y="8" width="62" height="22" rx="6" fill="rgba(136,221,255,0.15)" stroke="rgba(136,221,255,0.4)"/>
+    <text x="311" y="22" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#88ddff" text-anchor="middle">🎲 Randomize</text>
+
+    <text x="16" y="44" font-family="system-ui,sans-serif" font-size="9" fill="#f0e8ff" font-weight="600">Name</text>
+    <rect x="16" y="48" width="328" height="28" rx="8" fill="rgba(0,0,0,0.5)" stroke="rgba(204,136,255,0.3)"/>
+    <text x="26" y="66" font-family="'Crimson Pro', serif" font-size="13" fill="#cc88ff" font-style="italic">Mossglow</text>
+
+    <text x="16" y="92" font-family="system-ui,sans-serif" font-size="9" fill="#f0e8ff" font-weight="600">Vibe (free-form)</text>
+    <rect x="16" y="96" width="328" height="20" rx="6" fill="rgba(0,0,0,0.5)" stroke="rgba(204,136,255,0.3)"/>
+    <text x="26" y="110" font-family="system-ui,sans-serif" font-size="10" fill="rgba(240,232,255,0.7)" font-style="italic">a sarcastic moth-girl who hums to crystals…</text>
+  </g>
+
+  <!-- OCEAN section -->
+  <g transform="translate(40 425)">
+    <rect width="360" height="280" rx="14" fill="rgba(204,136,255,0.06)" stroke="rgba(204,136,255,0.2)"/>
+    <text x="16" y="22" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#cc88ff" letter-spacing="0.5">Core Personality (OCEAN) <tspan font-size="8" fill="rgba(240,232,255,0.4)">BASIC</tspan></text>
+    <rect x="280" y="8" width="62" height="22" rx="6" fill="rgba(136,221,255,0.15)" stroke="rgba(136,221,255,0.4)"/>
+    <text x="311" y="22" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#88ddff" text-anchor="middle">🎲 Randomize</text>
+
+    <!-- Slider rows -->
+    <g transform="translate(16 42)">
+      <text x="0" y="10" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#f0e8ff">🌱 Openness</text>
+      <text x="328" y="10" font-family="system-ui,sans-serif" font-size="10" font-weight="800" fill="#cc88ff" text-anchor="end">82</text>
+      <rect x="0" y="16" width="328" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+      <rect x="0" y="16" width="269" height="4" rx="2" fill="#cc88ff"/>
+      <circle cx="269" cy="18" r="7" fill="#fff"/>
+    </g>
+    <g transform="translate(16 88)">
+      <text x="0" y="10" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#f0e8ff">🎯 Conscientiousness</text>
+      <text x="328" y="10" font-family="system-ui,sans-serif" font-size="10" font-weight="800" fill="#cc88ff" text-anchor="end">34</text>
+      <rect x="0" y="16" width="328" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+      <rect x="0" y="16" width="111" height="4" rx="2" fill="#cc88ff"/>
+      <circle cx="111" cy="18" r="7" fill="#fff"/>
+    </g>
+    <g transform="translate(16 134)">
+      <text x="0" y="10" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#f0e8ff">✨ Extraversion</text>
+      <text x="328" y="10" font-family="system-ui,sans-serif" font-size="10" font-weight="800" fill="#cc88ff" text-anchor="end">61</text>
+      <rect x="0" y="16" width="328" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+      <rect x="0" y="16" width="200" height="4" rx="2" fill="#cc88ff"/>
+      <circle cx="200" cy="18" r="7" fill="#fff"/>
+    </g>
+    <g transform="translate(16 180)">
+      <text x="0" y="10" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#f0e8ff">🤝 Agreeableness</text>
+      <text x="328" y="10" font-family="system-ui,sans-serif" font-size="10" font-weight="800" fill="#cc88ff" text-anchor="end">28</text>
+      <rect x="0" y="16" width="328" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+      <rect x="0" y="16" width="91" height="4" rx="2" fill="#cc88ff"/>
+      <circle cx="91" cy="18" r="7" fill="#fff"/>
+    </g>
+    <g transform="translate(16 226)">
+      <text x="0" y="10" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#f0e8ff">🌊 Emotional Volatility</text>
+      <text x="328" y="10" font-family="system-ui,sans-serif" font-size="10" font-weight="800" fill="#cc88ff" text-anchor="end">71</text>
+      <rect x="0" y="16" width="328" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+      <rect x="0" y="16" width="233" height="4" rx="2" fill="#cc88ff"/>
+      <circle cx="233" cy="18" r="7" fill="#fff"/>
+    </g>
+  </g>
+
+  <!-- Sub-Traits preview row -->
+  <g transform="translate(40 720)">
+    <rect width="360" height="105" rx="14" fill="rgba(204,136,255,0.06)" stroke="rgba(204,136,255,0.2)"/>
+    <text x="16" y="22" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#cc88ff">Sub-Traits</text>
+    <rect x="280" y="8" width="62" height="22" rx="6" fill="rgba(136,221,255,0.15)" stroke="rgba(136,221,255,0.4)"/>
+    <text x="311" y="22" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#88ddff" text-anchor="middle">🎲 Randomize</text>
+
+    <g transform="translate(16 38)">
+      <text x="0" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#f0e8ff">🗯 Wit</text>
+      <rect x="60" y="4" width="100" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
+      <rect x="60" y="4" width="88" height="3" rx="1.5" fill="#cc88ff"/>
+      <text x="170" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#cc88ff">88</text>
+      <text x="200" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#f0e8ff">😈 Mischief</text>
+      <rect x="260" y="4" width="60" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
+      <rect x="260" y="4" width="51" height="3" rx="1.5" fill="#cc88ff"/>
+      <text x="328" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#cc88ff">85</text>
+    </g>
+    <g transform="translate(16 60)">
+      <text x="0" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#f0e8ff">💞 Empathy</text>
+      <rect x="60" y="4" width="100" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
+      <rect x="60" y="4" width="22" height="3" rx="1.5" fill="#cc88ff"/>
+      <text x="170" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#cc88ff">22</text>
+      <text x="200" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#f0e8ff">🌧 Melancholy</text>
+      <rect x="260" y="4" width="60" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
+      <rect x="260" y="4" width="44" height="3" rx="1.5" fill="#cc88ff"/>
+      <text x="328" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#cc88ff">73</text>
+    </g>
+    <g transform="translate(16 82)">
+      <text x="0" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#f0e8ff">🔭 Curiosity</text>
+      <rect x="60" y="4" width="100" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
+      <rect x="60" y="4" width="94" height="3" rx="1.5" fill="#cc88ff"/>
+      <text x="170" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#cc88ff">94</text>
+      <text x="200" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#f0e8ff">🎈 Playfulness</text>
+      <rect x="260" y="4" width="60" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
+      <rect x="260" y="4" width="46" height="3" rx="1.5" fill="#cc88ff"/>
+      <text x="328" y="10" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#cc88ff">76</text>
+    </g>
+  </g>
+
+  <rect x="170" y="850" width="100" height="4" rx="2" fill="#fff" opacity="0.5"/>
+</svg>
