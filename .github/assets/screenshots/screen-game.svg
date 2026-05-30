@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" width="400" height="800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1a14"/>
+      <stop offset="35%" stop-color="#1f4030"/>
+      <stop offset="75%" stop-color="#0f2818"/>
+      <stop offset="100%" stop-color="#040a07"/>
+    </linearGradient>
+    <radialGradient id="sunG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff4c0" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#88dd66" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#88dd66" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fog" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#88aa77" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#88aa77" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3320"/>
+      <stop offset="100%" stop-color="#050a06"/>
+    </linearGradient>
+    <radialGradient id="eyeG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#88ddff"/>
+      <stop offset="100%" stop-color="#0066aa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="crystalG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cc88ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7a3acc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="subB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="800" fill="url(#sky)"/>
+
+  <!-- Sun halo through canopy -->
+  <ellipse cx="290" cy="180" rx="120" ry="80" fill="url(#sunG)"/>
+
+  <!-- Distant mountain silhouettes -->
+  <polygon points="0,360 60,300 120,340 180,280 240,330 320,290 400,340 400,400 0,400" fill="#0c1f15" opacity="0.85"/>
+  <polygon points="0,400 80,350 160,380 220,340 300,370 400,355 400,440 0,440" fill="#091a11" opacity="0.9"/>
+
+  <!-- Tree silhouettes mid-ground -->
+  <g opacity="0.9">
+    <polygon points="20,500 40,360 60,500" fill="#051208"/>
+    <polygon points="70,520 95,330 120,520" fill="#061a0c"/>
+    <polygon points="280,510 305,340 330,510" fill="#061a0c"/>
+    <polygon points="340,525 365,360 390,525" fill="#051208"/>
+  </g>
+
+  <!-- Ground plane -->
+  <rect y="500" width="400" height="300" fill="url(#ground)"/>
+
+  <!-- Fog band -->
+  <rect y="440" width="400" height="180" fill="url(#fog)"/>
+
+  <!-- Glowing mushrooms scattered -->
+  <g opacity="0.85">
+    <circle cx="60" cy="620" r="6" fill="#cc88ff" opacity="0.8"/>
+    <rect x="58" y="620" width="4" height="14" fill="#3a2050"/>
+    <circle cx="110" cy="650" r="4" fill="#cc88ff" opacity="0.7"/>
+    <rect x="108.5" y="650" width="3" height="10" fill="#3a2050"/>
+    <circle cx="330" cy="640" r="7" fill="#88ddff" opacity="0.7"/>
+    <rect x="328" y="640" width="4" height="14" fill="#1a3a50"/>
+    <circle cx="370" cy="670" r="5" fill="#cc88ff" opacity="0.7"/>
+    <rect x="368.5" y="670" width="3" height="11" fill="#3a2050"/>
+  </g>
+
+  <!-- Companion (foreground, slightly off-center) -->
+  <g transform="translate(150 560)">
+    <!-- shadow -->
+    <ellipse cx="0" cy="120" rx="36" ry="6" fill="#000" opacity="0.55"/>
+    <!-- body (capsule) -->
+    <rect x="-22" y="20" width="44" height="80" rx="22" fill="#3a2855" stroke="#5a3a88" stroke-width="1.5"/>
+    <!-- arm hint -->
+    <rect x="-32" y="40" width="12" height="42" rx="6" fill="#3a2855" stroke="#5a3a88" stroke-width="1"/>
+    <rect x="20" y="40" width="12" height="42" rx="6" fill="#3a2855" stroke="#5a3a88" stroke-width="1"/>
+    <!-- head -->
+    <circle cx="0" cy="0" r="24" fill="#4a3068" stroke="#7a5aaa" stroke-width="1.5"/>
+    <!-- glowing eyes -->
+    <circle cx="-8" cy="-2" r="9" fill="url(#eyeG)"/>
+    <circle cx="8" cy="-2" r="9" fill="url(#eyeG)"/>
+    <circle cx="-8" cy="-2" r="3" fill="#fff"/>
+    <circle cx="8" cy="-2" r="3" fill="#fff"/>
+    <!-- crown ember -->
+    <circle cx="0" cy="-22" r="3" fill="#ffcc88" opacity="0.9"/>
+  </g>
+
+  <!-- Floating crystal interactable -->
+  <g transform="translate(310 480)">
+    <circle r="34" fill="url(#crystalG)"/>
+    <polygon points="0,-18 14,0 0,18 -14,0" fill="#cc88ff" stroke="#fff" stroke-width="1.2"/>
+    <polygon points="0,-18 14,0 0,0" fill="#e0c8ff"/>
+  </g>
+
+  <!-- Ancient door silhouette far back -->
+  <g transform="translate(225 430)" opacity="0.85">
+    <rect x="-14" y="0" width="28" height="50" rx="14" fill="#0a0510" stroke="#cc88ff" stroke-width="1" stroke-opacity="0.6"/>
+    <circle cx="0" cy="20" r="8" fill="#cc88ff" opacity="0.35"/>
+  </g>
+
+  <!-- Floating particles / spores -->
+  <g fill="#cc88ff" opacity="0.7">
+    <circle cx="50" cy="300" r="1.2"/>
+    <circle cx="110" cy="240" r="0.9"/>
+    <circle cx="180" cy="320" r="1.4"/>
+    <circle cx="240" cy="270" r="1"/>
+    <circle cx="310" cy="350" r="1.2"/>
+    <circle cx="370" cy="290" r="0.9"/>
+    <circle cx="80" cy="420" r="1"/>
+    <circle cx="220" cy="450" r="1.3"/>
+    <circle cx="350" cy="430" r="1"/>
+    <circle cx="30" cy="380" r="0.8"/>
+    <circle cx="160" cy="380" r="1.1"/>
+    <circle cx="280" cy="400" r="0.9"/>
+  </g>
+
+  <!-- Top HUD badges -->
+  <g transform="translate(16 24)">
+    <!-- Biome badge -->
+    <rect width="118" height="28" rx="14" fill="#000" fill-opacity="0.55" stroke="#88dd66" stroke-opacity="0.4"/>
+    <circle cx="16" cy="14" r="5" fill="#88dd66"/>
+    <text x="30" y="18" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0ffd8" letter-spacing="0.5">FOREST · HUMAN</text>
+  </g>
+  <g transform="translate(266 24)">
+    <!-- Health/state -->
+    <rect width="118" height="28" rx="14" fill="#000" fill-opacity="0.55" stroke="#cc88ff" stroke-opacity="0.4"/>
+    <text x="14" y="18" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#f0d8ff" letter-spacing="0.5">DAY 03 · DUSK</text>
+  </g>
+
+  <!-- Task chip -->
+  <g transform="translate(16 64)">
+    <rect width="368" height="44" rx="12" fill="#000" fill-opacity="0.55" stroke="#cc88ff" stroke-opacity="0.35"/>
+    <circle cx="18" cy="22" r="6" fill="none" stroke="#cc88ff" stroke-width="1.5"/>
+    <circle cx="18" cy="22" r="2.5" fill="#cc88ff"/>
+    <text x="34" y="20" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff" letter-spacing="0.6">CURRENT TASK</text>
+    <text x="34" y="34" font-family="system-ui,sans-serif" font-size="11" fill="#cfc8d8">Find the whispering door beyond the mushroom grove</text>
+  </g>
+
+  <!-- Subtitle bubble -->
+  <g transform="translate(20 660)">
+    <rect width="360" height="58" rx="14" fill="url(#subB)" stroke="#cc88ff" stroke-opacity="0.35"/>
+    <text x="16" y="22" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#cc88ff" letter-spacing="1.2">LYRA · COMPANION</text>
+    <text x="16" y="42" font-family="system-ui,sans-serif" font-size="12" fill="#fff">Do you hear it too? The trees… they're</text>
+    <text x="16" y="54" font-family="system-ui,sans-serif" font-size="12" fill="#fff">remembering something.</text>
+  </g>
+
+  <!-- Waveform mic strip -->
+  <g transform="translate(20 736)">
+    <rect width="280" height="44" rx="22" fill="#000" fill-opacity="0.6" stroke="#cc88ff" stroke-opacity="0.4"/>
+    <g fill="#cc88ff">
+      <rect x="16" y="20" width="2" height="4" rx="1"/>
+      <rect x="22" y="16" width="2" height="12" rx="1"/>
+      <rect x="28" y="12" width="2" height="20" rx="1"/>
+      <rect x="34" y="8" width="2" height="28" rx="1"/>
+      <rect x="40" y="14" width="2" height="16" rx="1"/>
+      <rect x="46" y="10" width="2" height="24" rx="1"/>
+      <rect x="52" y="6" width="2" height="32" rx="1"/>
+      <rect x="58" y="12" width="2" height="20" rx="1"/>
+      <rect x="64" y="18" width="2" height="8" rx="1"/>
+      <rect x="70" y="14" width="2" height="16" rx="1"/>
+      <rect x="76" y="8" width="2" height="28" rx="1"/>
+      <rect x="82" y="12" width="2" height="20" rx="1"/>
+      <rect x="88" y="16" width="2" height="12" rx="1"/>
+      <rect x="94" y="10" width="2" height="24" rx="1"/>
+      <rect x="100" y="6" width="2" height="32" rx="1"/>
+      <rect x="106" y="14" width="2" height="16" rx="1"/>
+      <rect x="112" y="18" width="2" height="8" rx="1"/>
+      <rect x="118" y="12" width="2" height="20" rx="1"/>
+      <rect x="124" y="8" width="2" height="28" rx="1"/>
+      <rect x="130" y="14" width="2" height="16" rx="1"/>
+      <rect x="136" y="20" width="2" height="4" rx="1"/>
+      <rect x="142" y="16" width="2" height="12" rx="1"/>
+      <rect x="148" y="10" width="2" height="24" rx="1"/>
+      <rect x="154" y="6" width="2" height="32" rx="1"/>
+      <rect x="160" y="14" width="2" height="16" rx="1"/>
+      <rect x="166" y="18" width="2" height="8" rx="1"/>
+      <rect x="172" y="12" width="2" height="20" rx="1"/>
+      <rect x="178" y="8" width="2" height="28" rx="1"/>
+      <rect x="184" y="14" width="2" height="16" rx="1"/>
+      <rect x="190" y="20" width="2" height="4" rx="1"/>
+      <rect x="196" y="16" width="2" height="12" rx="1"/>
+      <rect x="202" y="10" width="2" height="24" rx="1"/>
+      <rect x="208" y="14" width="2" height="16" rx="1"/>
+      <rect x="214" y="18" width="2" height="8" rx="1"/>
+    </g>
+    <text x="240" y="28" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#cc88ff" letter-spacing="1">LIVE</text>
+  </g>
+
+  <!-- Mic button -->
+  <g transform="translate(330 736)">
+    <circle cx="22" cy="22" r="22" fill="#cc88ff"/>
+    <circle cx="22" cy="22" r="22" fill="none" stroke="#fff" stroke-opacity="0.4" stroke-width="2"/>
+    <rect x="17" y="12" width="10" height="16" rx="5" fill="#1a0a2a"/>
+    <path d="M 14 22 Q 14 30 22 30 Q 30 30 30 22" fill="none" stroke="#1a0a2a" stroke-width="2"/>
+    <line x1="22" y1="30" x2="22" y2="34" stroke="#1a0a2a" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="900" height="240">
+  <defs>
+    <radialGradient id="void2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cc88ff" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#7a3acc" stop-opacity="0.85"/>
+      <stop offset="80%" stop-color="#1a0a3a" stop-opacity="0.98"/>
+      <stop offset="100%" stop-color="#000005" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="glow2">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="30%" stop-color="#cc88ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7a3acc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wordGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e0c8ff"/>
+      <stop offset="50%" stop-color="#cc88ff"/>
+      <stop offset="100%" stop-color="#7a3acc"/>
+    </linearGradient>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Mark on left -->
+  <g transform="translate(120 120)">
+    <circle r="100" fill="none" stroke="#cc88ff" stroke-width="0.4" stroke-opacity="0.2"/>
+    <ellipse cx="-28" cy="0" rx="38" ry="38" fill="url(#void2)"/>
+    <ellipse cx="28" cy="0" rx="38" ry="38" fill="url(#void2)"/>
+    <circle cx="-28" cy="0" r="12" fill="url(#glow2)" filter="url(#soft2)"/>
+    <circle cx="28" cy="0" r="12" fill="url(#glow2)" filter="url(#soft2)"/>
+    <path d="M -28 0 Q 0 -19 28 0 Q 0 19 -28 0 Z"
+          fill="none" stroke="#cc88ff" stroke-width="1.3" stroke-opacity="0.7"/>
+  </g>
+
+  <!-- Vertical divider -->
+  <line x1="240" y1="60" x2="240" y2="180" stroke="#7a3acc" stroke-opacity="0.3" stroke-width="0.5"/>
+
+  <!-- Wordmark -->
+  <text x="265" y="135" font-family="Cinzel Decorative, Cinzel, serif"
+        font-weight="900" font-size="60" letter-spacing="6"
+        fill="url(#wordGrad)">INFINITEWORLDS</text>
+
+  <text x="266" y="170" font-family="Crimson Pro, Crimson Text, serif"
+        font-style="italic" font-size="16" letter-spacing="4"
+        fill="#aa88dd" opacity="0.7">EVERY · WORD · RESHAPES · REALITY</text>
+</svg>

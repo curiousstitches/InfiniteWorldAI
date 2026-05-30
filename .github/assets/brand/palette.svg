@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520">
+  <rect width="1000" height="520" fill="#000005"/>
+
+  <text x="50" y="50" font-family="Cinzel Decorative, serif" font-size="22" letter-spacing="4" fill="#cc88ff">PALETTE</text>
+  <text x="50" y="80" font-family="Crimson Pro, serif" font-style="italic" font-size="14" fill="#7a5a99">The colors of the infinite</text>
+
+  <!-- VOID family -->
+  <text x="50" y="130" font-family="Cinzel, serif" font-size="11" letter-spacing="3" fill="#aa88dd">VOID</text>
+  <g transform="translate(50 145)">
+    <rect width="110" height="110" fill="#000005" stroke="#7a3acc" stroke-width="0.5"/>
+    <text x="10" y="95" font-family="Crimson Pro, serif" font-size="11" fill="#cc88ff">#000005</text>
+    <text x="10" y="108" font-family="Crimson Pro, serif" font-size="9" fill="#7a5a99" font-style="italic">absolute void</text>
+  </g>
+  <g transform="translate(170 145)">
+    <rect width="110" height="110" fill="#0a0518" stroke="#7a3acc" stroke-width="0.5"/>
+    <text x="10" y="95" font-family="Crimson Pro, serif" font-size="11" fill="#cc88ff">#0a0518</text>
+    <text x="10" y="108" font-family="Crimson Pro, serif" font-size="9" fill="#7a5a99" font-style="italic">deep cosmos</text>
+  </g>
+  <g transform="translate(290 145)">
+    <rect width="110" height="110" fill="#1a0a3a" stroke="#7a3acc" stroke-width="0.5"/>
+    <text x="10" y="95" font-family="Crimson Pro, serif" font-size="11" fill="#cc88ff">#1a0a3a</text>
+    <text x="10" y="108" font-family="Crimson Pro, serif" font-size="9" fill="#7a5a99" font-style="italic">nebula edge</text>
+  </g>
+
+  <!-- MYSTIC family -->
+  <text x="50" y="290" font-family="Cinzel, serif" font-size="11" letter-spacing="3" fill="#aa88dd">MYSTIC</text>
+  <g transform="translate(50 305)">
+    <rect width="110" height="110" fill="#7a3acc"/>
+    <text x="10" y="95" font-family="Crimson Pro, serif" font-size="11" fill="#ffffff">#7a3acc</text>
+    <text x="10" y="108" font-family="Crimson Pro, serif" font-size="9" fill="#e0c8ff" font-style="italic">portal heart</text>
+  </g>
+  <g transform="translate(170 305)">
+    <rect width="110" height="110" fill="#aa66ff"/>
+    <text x="10" y="95" font-family="Crimson Pro, serif" font-size="11" fill="#ffffff">#aa66ff</text>
+    <text x="10" y="108" font-family="Crimson Pro, serif" font-size="9" fill="#1a0a3a" font-style="italic">spirit edge</text>
+  </g>
+  <g transform="translate(290 305)">
+    <rect width="110" height="110" fill="#cc88ff"/>
+    <text x="10" y="95" font-family="Crimson Pro, serif" font-size="11" fill="#1a0a3a">#cc88ff</text>
+    <text x="10" y="108" font-family="Crimson Pro, serif" font-size="9" fill="#1a0a3a" font-style="italic">primary accent</text>
+  </g>
+  <g transform="translate(410 305)">
+    <rect width="110" height="110" fill="#e0c8ff"/>
+    <text x="10" y="95" font-family="Crimson Pro, serif" font-size="11" fill="#1a0a3a">#e0c8ff</text>
+    <text x="10" y="108" font-family="Crimson Pro, serif" font-size="9" fill="#1a0a3a" font-style="italic">body text</text>
+  </g>
+
+  <!-- EMOTIVE family -->
+  <text x="550" y="130" font-family="Cinzel, serif" font-size="11" letter-spacing="3" fill="#aa88dd">EMOTIVE</text>
+  <g transform="translate(550 145)">
+    <rect width="90" height="110" fill="#44ff88"/>
+    <text x="8" y="95" font-family="Crimson Pro, serif" font-size="10" fill="#003311">#44ff88</text>
+    <text x="8" y="106" font-family="Crimson Pro, serif" font-size="8" fill="#003311" font-style="italic">trivial</text>
+  </g>
+  <g transform="translate(645 145)">
+    <rect width="90" height="110" fill="#88ff44"/>
+    <text x="8" y="95" font-family="Crimson Pro, serif" font-size="10" fill="#113300">#88ff44</text>
+    <text x="8" y="106" font-family="Crimson Pro, serif" font-size="8" fill="#113300" font-style="italic">easy</text>
+  </g>
+  <g transform="translate(740 145)">
+    <rect width="90" height="110" fill="#ffaa44"/>
+    <text x="8" y="95" font-family="Crimson Pro, serif" font-size="10" fill="#331100">#ffaa44</text>
+    <text x="8" y="106" font-family="Crimson Pro, serif" font-size="8" fill="#331100" font-style="italic">medium</text>
+  </g>
+  <g transform="translate(835 145)">
+    <rect width="90" height="110" fill="#ff6644"/>
+    <text x="8" y="95" font-family="Crimson Pro, serif" font-size="10" fill="#330000">#ff6644</text>
+    <text x="8" y="106" font-family="Crimson Pro, serif" font-size="8" fill="#330000" font-style="italic">hard</text>
+  </g>
+  <g transform="translate(550 265)">
+    <rect width="90" height="60" fill="#ff44aa"/>
+    <text x="8" y="35" font-family="Crimson Pro, serif" font-size="10" fill="#330011">#ff44aa</text>
+    <text x="8" y="48" font-family="Crimson Pro, serif" font-size="8" fill="#330011" font-style="italic">legendary</text>
+  </g>
+
+  <!-- USAGE NOTES -->
+  <text x="550" y="370" font-family="Cinzel, serif" font-size="11" letter-spacing="3" fill="#aa88dd">USAGE</text>
+  <g font-family="Crimson Pro, serif" font-size="12" fill="#aa88dd">
+    <text x="550" y="395">Backgrounds → VOID family</text>
+    <text x="550" y="415">Accents + buttons → MYSTIC family</text>
+    <text x="550" y="435">Body text → #e0c8ff (90% opacity)</text>
+    <text x="550" y="455">Task difficulty → EMOTIVE family</text>
+    <text x="550" y="475">Avoid → pure white #ffffff (only for glows)</text>
+  </g>
+
+  <!-- TYPE SAMPLE -->
+  <text x="50" y="460" font-family="Cinzel Decorative, serif" font-size="30" letter-spacing="6" fill="#cc88ff">TYPE · SAMPLE</text>
+  <text x="50" y="495" font-family="Crimson Pro, serif" font-style="italic" font-size="15" fill="#e0c8ff" opacity="0.85">
+    A companion's whisper carries the weight of a thousand worlds.
+  </text>
+</svg>

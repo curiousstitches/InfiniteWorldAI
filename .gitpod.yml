@@ -1,0 +1,26 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Backend
+    init: |
+      npm install --prefix server
+      cp .env.example .env
+    command: node server/index.js
+
+  - name: Frontend
+    init: npm install --prefix client
+    command: npm run dev --prefix client -- --host
+
+ports:
+  - port: 3001
+    onOpen: ignore
+    visibility: public
+  - port: 5173
+    onOpen: open-preview
+    visibility: public
+
+github:
+  prebuilds:
+    master: true
+    pullRequests: true

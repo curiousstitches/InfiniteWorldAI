@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 900" width="440" height="900">
+  <defs>
+    <linearGradient id="bz" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1a1f"/><stop offset="100%" stop-color="#0a0a0f"/></linearGradient>
+    <linearGradient id="bgSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0418"/>
+      <stop offset="50%" stop-color="#2a1860"/>
+      <stop offset="100%" stop-color="#5a3aa8"/>
+    </linearGradient>
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cc88ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#cc88ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(40,20,80,0.85)"/>
+      <stop offset="100%" stop-color="rgba(20,10,40,0.75)"/>
+    </linearGradient>
+    <linearGradient id="heroCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a2068"/>
+      <stop offset="100%" stop-color="#1a0a38"/>
+    </linearGradient>
+    <linearGradient id="primaryBtn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cc88ff"/>
+      <stop offset="100%" stop-color="#7a3acc"/>
+    </linearGradient>
+    <radialGradient id="planetGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#88ddff"/>
+      <stop offset="60%" stop-color="#4a78aa"/>
+      <stop offset="100%" stop-color="#1a3050"/>
+    </radialGradient>
+    <radialGradient id="suitWhite" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="100%" stop-color="#a8a4a0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="440" height="900" rx="60" fill="url(#bz)"/>
+  <rect x="10" y="10" width="420" height="880" rx="50" fill="#000"/>
+
+  <clipPath id="screen"><rect x="20" y="20" width="400" height="860" rx="42"/></clipPath>
+  <g clip-path="url(#screen)">
+    <rect x="20" y="20" width="400" height="860" fill="url(#bgSky)"/>
+
+    <g fill="#fff">
+      <circle cx="80" cy="120" r="1.2" opacity="0.9"/><circle cx="160" cy="80" r="0.8" opacity="0.7"/>
+      <circle cx="280" cy="140" r="1.5" opacity="0.95"/><circle cx="350" cy="100" r="1" opacity="0.8"/>
+      <circle cx="60" cy="220" r="0.7" opacity="0.6"/><circle cx="380" cy="200" r="1.3" opacity="0.85"/>
+      <circle cx="120" cy="280" r="0.6" opacity="0.5"/><circle cx="240" cy="240" r="1.1" opacity="0.75"/>
+      <circle cx="320" cy="300" r="0.9" opacity="0.7"/><circle cx="180" cy="380" r="0.8" opacity="0.6"/>
+    </g>
+
+    <ellipse cx="220" cy="200" rx="200" ry="80" fill="url(#starGlow)" opacity="0.6"/>
+
+    <rect x="20" y="20" width="400" height="80" fill="rgba(0,0,0,0.3)"/>
+  </g>
+
+  <text x="50" y="55" font-family="system-ui" font-size="13" font-weight="700" fill="#fff">9:42</text>
+  <rect x="170" y="35" width="100" height="28" rx="14" fill="#000"/>
+  <g transform="translate(360 42)">
+    <rect width="18" height="11" rx="2" fill="none" stroke="#fff"/>
+    <rect x="2" y="2" width="14" height="7" fill="#fff"/>
+    <rect x="20" y="1" width="2" height="9" rx="1" fill="#fff"/>
+  </g>
+
+  <g transform="translate(40 110)">
+    <text x="0" y="0" font-family="system-ui" font-size="11" font-weight="700" fill="#cc88ff" letter-spacing="3">INFINITEWORLDS</text>
+    <text x="0" y="36" font-family="system-ui" font-size="28" font-weight="800" fill="#fff" letter-spacing="-0.5">Pick a world,</text>
+    <text x="0" y="68" font-family="system-ui" font-size="28" font-weight="800" fill="#fff" letter-spacing="-0.5">or birth a new one.</text>
+  </g>
+
+  <g transform="translate(340 130)">
+    <circle cx="20" cy="20" r="18" fill="rgba(0,0,0,0.4)" stroke="rgba(204,136,255,0.3)"/>
+    <text x="20" y="26" font-family="system-ui" font-size="16" text-anchor="middle" fill="#fff">⚙</text>
+  </g>
+
+  <!-- HERO CARD — RECENT WORLD -->
+  <g transform="translate(40 220)">
+    <rect width="360" height="200" rx="20" fill="url(#heroCard)" stroke="rgba(204,136,255,0.4)"/>
+    <clipPath id="heroClip"><rect x="0" y="0" width="360" height="200" rx="20"/></clipPath>
+    <g clip-path="url(#heroClip)">
+      <rect width="360" height="200" fill="#1a0838"/>
+      <circle cx="320" cy="50" r="40" fill="url(#planetGlow)" opacity="0.7"/>
+      <ellipse cx="180" cy="180" rx="240" ry="60" fill="#3a2068"/>
+      <ellipse cx="100" cy="155" rx="80" ry="20" fill="#4a2880" opacity="0.7"/>
+
+      <g transform="translate(80 100)">
+        <ellipse cx="0" cy="50" rx="32" ry="38" fill="url(#suitWhite)"/>
+        <ellipse cx="0" cy="55" rx="22" ry="20" fill="#ff8040"/>
+        <ellipse cx="0" cy="20" rx="22" ry="6" fill="#3a3530"/>
+        <ellipse cx="0" cy="-2" rx="20" ry="24" fill="#e8b894"/>
+        <path d="M -20 -8 Q -22 -22 -10 -26 Q 0 -30 12 -26 Q 22 -22 22 -6 Q 18 -16 0 -18 Q -18 -16 -20 -8 Z" fill="#1a0c08"/>
+        <circle cx="-7" cy="2" r="2.5" fill="#fff"/>
+        <circle cx="-7" cy="2" r="1.4" fill="#3a2818"/>
+        <circle cx="-6.5" cy="1.5" r="0.5" fill="#fff"/>
+        <circle cx="7" cy="2" r="2.5" fill="#fff"/>
+        <circle cx="7" cy="2" r="1.4" fill="#3a2818"/>
+        <circle cx="7.5" cy="1.5" r="0.5" fill="#fff"/>
+        <path d="M -4 12 Q 0 15 4 12" stroke="#a85848" stroke-width="1.2" fill="none"/>
+      </g>
+
+      <g fill="#cc88ff" opacity="0.5">
+        <circle cx="200" cy="60" r="1"/><circle cx="240" cy="100" r="0.8"/>
+        <circle cx="180" cy="120" r="1.2"/><circle cx="280" cy="140" r="0.9"/>
+      </g>
+    </g>
+
+    <rect y="140" width="360" height="60" fill="rgba(10,4,24,0.85)"/>
+    <text x="20" y="160" font-family="system-ui" font-size="9" font-weight="700" fill="#cc88ff" letter-spacing="1.5">CONTINUE · 2 HRS AGO</text>
+    <text x="20" y="180" font-family="system-ui" font-size="16" font-weight="800" fill="#fff">Whispers on Gaia</text>
+    <text x="20" y="194" font-family="system-ui" font-size="11" fill="rgba(255,255,255,0.7)">Stella · alien desert · trust 78%</text>
+    <g transform="translate(310 168)">
+      <circle r="14" fill="#cc88ff"/>
+      <text y="5" font-family="system-ui" font-size="14" text-anchor="middle" fill="#0a0218">▶</text>
+    </g>
+  </g>
+
+  <g transform="translate(40 450)">
+    <text x="0" y="0" font-family="system-ui" font-size="10" font-weight="700" fill="rgba(204,136,255,0.7)" letter-spacing="1.5">YOUR WORLDS · 3</text>
+
+    <g transform="translate(0 16)">
+      <rect width="360" height="62" rx="14" fill="url(#cardGlass)" stroke="rgba(204,136,255,0.15)"/>
+      <circle cx="38" cy="31" r="22" fill="#1a4030"/>
+      <text x="38" y="38" font-family="system-ui" font-size="18" text-anchor="middle">🌲</text>
+      <text x="76" y="28" font-family="system-ui" font-size="14" font-weight="700" fill="#fff">Mossbloom</text>
+      <text x="76" y="46" font-family="system-ui" font-size="10" fill="rgba(255,255,255,0.6)">Forest · companion: Briar · 5d ago</text>
+      <text x="340" y="36" font-family="system-ui" font-size="14" text-anchor="middle" fill="rgba(255,255,255,0.4)">›</text>
+    </g>
+
+    <g transform="translate(0 88)">
+      <rect width="360" height="62" rx="14" fill="url(#cardGlass)" stroke="rgba(204,136,255,0.15)"/>
+      <circle cx="38" cy="31" r="22" fill="#1a3060"/>
+      <text x="38" y="38" font-family="system-ui" font-size="18" text-anchor="middle">🌊</text>
+      <text x="76" y="28" font-family="system-ui" font-size="14" font-weight="700" fill="#fff">Tidepool Below</text>
+      <text x="76" y="46" font-family="system-ui" font-size="10" fill="rgba(255,255,255,0.6)">Ocean · companion: Cael · 2w ago</text>
+      <text x="340" y="36" font-family="system-ui" font-size="14" text-anchor="middle" fill="rgba(255,255,255,0.4)">›</text>
+    </g>
+
+    <g transform="translate(0 160)">
+      <rect width="360" height="62" rx="14" fill="url(#cardGlass)" stroke="rgba(204,136,255,0.15)"/>
+      <circle cx="38" cy="31" r="22" fill="#2a0a40"/>
+      <text x="38" y="38" font-family="system-ui" font-size="18" text-anchor="middle">🍄</text>
+      <text x="76" y="28" font-family="system-ui" font-size="14" font-weight="700" fill="#fff">Spore Cathedral</text>
+      <text x="76" y="46" font-family="system-ui" font-size="10" fill="rgba(255,255,255,0.6)">Mushroom forest · Vex · 1mo ago</text>
+      <text x="340" y="36" font-family="system-ui" font-size="14" text-anchor="middle" fill="rgba(255,255,255,0.4)">›</text>
+    </g>
+  </g>
+
+  <g transform="translate(40 720)">
+    <rect width="360" height="60" rx="30" fill="url(#primaryBtn)"/>
+    <text x="180" y="38" font-family="system-ui" font-size="16" font-weight="800" text-anchor="middle" fill="#0a0218">+   Birth a new world</text>
+  </g>
+
+  <text x="220" y="820" font-family="system-ui" font-size="10" fill="rgba(255,255,255,0.4)" text-anchor="middle">3 active worlds · 47 legacy echoes</text>
+
+  <rect x="170" y="850" width="100" height="4" rx="2" fill="#fff" opacity="0.5"/>
+</svg>

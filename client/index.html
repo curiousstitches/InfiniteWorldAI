@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>INFINITEWORLDS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <!-- Puter.js SDK — client-side free LLM access (Claude/GPT/Gemini/DeepSeek), user-pays model -->
+  <script src="https://js.puter.com/v2/"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body, #root { width: 100%; height: 100%; overflow: hidden; background: #000; }
+    canvas { display: block; touch-action: none; }
+
+    /* ── Rainbow theme — a slow hue cycle applied across the whole UI ── */
+    @keyframes iwHue { from { filter: hue-rotate(0deg); } to { filter: hue-rotate(360deg); } }
+    @keyframes iwHueText {
+      0%   { color: #ff6ec7; } 16% { color: #ff9a3c; } 33% { color: #ffe14d; }
+      50%  { color: #3ad17a; } 66% { color: #38b6ff; } 83% { color: #cc88ff; }
+      100% { color: #ff6ec7; }
+    }
+    @keyframes iwHueBorder {
+      0%   { border-color: #ff6ec7; box-shadow: 0 0 14px rgba(255,110,199,0.4); }
+      33%  { border-color: #ffe14d; box-shadow: 0 0 14px rgba(255,225,77,0.4); }
+      50%  { border-color: #3ad17a; box-shadow: 0 0 14px rgba(58,209,122,0.4); }
+      66%  { border-color: #38b6ff; box-shadow: 0 0 14px rgba(56,182,255,0.4); }
+      100% { border-color: #ff6ec7; box-shadow: 0 0 14px rgba(255,110,199,0.4); }
+    }
+    /* Buttons, logos, accents that opt into the cycle */
+    .iw-rainbow      { animation: iwHue 18s linear infinite; }
+    .iw-rainbow-text { animation: iwHueText 18s linear infinite; }
+    .iw-rainbow-border { animation: iwHueBorder 18s linear infinite; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <div id="build-stamp" style="position:fixed;bottom:2px;right:4px;z-index:99999;font:9px monospace;color:rgba(204,136,255,0.5);pointer-events:none;">v42-optimized</div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

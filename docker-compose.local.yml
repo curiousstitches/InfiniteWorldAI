@@ -1,0 +1,27 @@
+# Run the full Infiniteworlds stack with: docker compose up
+# Server is the only required container; client is bundled inside it.
+# Volumes preserve the SQLite DB between restarts.
+
+services:
+  infiniteworlds:
+    build: .
+    image: infiniteworlds:latest
+    container_name: infiniteworlds
+    ports:
+      - "3001:3001"
+    volumes:
+      - infiniteworlds-data:/app/data
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      # All API keys are optional — uncomment + paste as needed
+      # - OPENAI_API_KEY=
+      # - ANTHROPIC_API_KEY=
+      # - GROQ_API_KEY=
+      # - GOOGLE_API_KEY=
+      # - ELEVENLABS_API_KEY=
+      # - MESHY_API_KEY=
+    restart: unless-stopped
+
+volumes:
+  infiniteworlds-data:

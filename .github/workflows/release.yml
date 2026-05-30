@@ -1,0 +1,48 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm install --ignore-scripts
+      - run: cd client && npm run build
+
+      - name: Package release artifacts
+        run: |
+          mkdir -p release
+          tar -czf release/infiniteworlds-client-${{ github.ref_name }}.tar.gz -C client/dist .
+          tar -czf release/infiniteworlds-server-${{ github.ref_name }}.tar.gz server --exclude='server/node_modules' --exclude='server/data'
+
+      - name: Generate release notes
+        id: notes
+        run: |
+          LAST_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || git rev-list --max-parents=0 HEAD)
+          {
+            echo "## Changes since $LAST_TAG"
+            echo ""
+            git log $LAST_TAG..HEAD --pretty=format:"- %s (%h)" --no-merges
+          } > release_notes.md
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: release_notes.md
+          files: release/*.tar.gz
+          draft: false
+          prerelease: ${{ contains(github.ref_name, '-') }}

@@ -1,0 +1,30 @@
+name: 🤔 Question
+description: Ask anything about how the infinite works.
+title: "[Q]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For broader discussion, also consider [GitHub Discussions](../discussions).
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What are you trying to do? What have you already tried?
+
+  - type: checkboxes
+    id: searched
+    attributes:
+      label: Pre-flight check
+      options:
+        - label: I read the README
+        - label: I searched existing issues and discussions

@@ -1,0 +1,99 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  install:
+    name: Install & Cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci --ignore-scripts || npm install --ignore-scripts
+      - uses: actions/cache/save@v4
+        with:
+          path: |
+            node_modules
+            server/node_modules
+            client/node_modules
+          key: deps-${{ runner.os }}-${{ hashFiles('**/package-lock.json', '**/package.json') }}
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    needs: install
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - uses: actions/cache/restore@v4
+        with:
+          path: |
+            node_modules
+            server/node_modules
+            client/node_modules
+          key: deps-${{ runner.os }}-${{ hashFiles('**/package-lock.json', '**/package.json') }}
+      - run: npm install --ignore-scripts
+      - name: Syntax check (server)
+        run: |
+          cd server
+          for f in $(find . -name "*.js" -not -path "./node_modules/*"); do
+            node --check "$f" || exit 1
+          done
+      - name: Syntax check (client)
+        run: |
+          cd client
+          npx --yes esbuild src/**/*.{js,jsx} --bundle --outfile=/dev/null --loader:.js=jsx --loader:.jsx=jsx --jsx=automatic --platform=browser --external:react --external:react-dom --external:@babylonjs/* --external:zustand --external:simplex-noise 2>&1 | grep -i error && exit 1 || true
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: install
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm install --ignore-scripts
+      - name: Build client
+        run: cd client && npm run build
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: client-dist
+          path: client/dist
+          retention-days: 7
+
+  security:
+    name: Security Audit
+    runs-on: ubuntu-latest
+    needs: install
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install --ignore-scripts
+      - name: Audit dependencies
+        run: npm audit --audit-level=high --omit=dev || true
+      - name: Check for secrets
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: ${{ github.event.repository.default_branch }}
+          head: HEAD
+        continue-on-error: true

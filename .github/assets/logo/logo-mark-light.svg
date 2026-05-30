@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="lightVoid" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#e0c8ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#cc88ff" stop-opacity="0.95"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="128" cy="128" r="120" fill="none" stroke="#ffffff" stroke-width="0.4" stroke-opacity="0.4"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.25"/>
+
+  <g transform="translate(128 128)">
+    <ellipse cx="-32" cy="0" rx="44" ry="44" fill="url(#lightVoid)"/>
+    <ellipse cx="32" cy="0" rx="44" ry="44" fill="url(#lightVoid)"/>
+    <path d="M -32 0 Q 0 -22 32 0 Q 0 22 -32 0 Z"
+          fill="none" stroke="#ffffff" stroke-width="1.8" stroke-opacity="0.9"/>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+name: Deploy Demo to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Install ONLY client deps (ignore workspaces — server is irrelevant for the demo)
+      - name: Install client deps
+        run: |
+          cd client
+          npm install --no-audit --no-fund --workspaces=false --install-strategy=nested
+
+      - name: Build demo bundle
+        working-directory: client
+        env:
+          DEMO_MODE: 'true'
+          VITE_BASE: '/${{ github.event.repository.name }}/'
+        run: npm run build
+
+      - name: Add 404.html for SPA fallback
+        run: cp client/dist/index.html client/dist/404.html
+
+      - name: Add .nojekyll
+        run: touch client/dist/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: client/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

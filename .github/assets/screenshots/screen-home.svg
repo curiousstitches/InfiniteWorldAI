@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" width="400" height="800">
+  <defs>
+    <radialGradient id="bgR" cx="50%" cy="60%" r="60%">
+      <stop offset="0%" stop-color="#0d0520"/>
+      <stop offset="100%" stop-color="#000005"/>
+    </radialGradient>
+    <radialGradient id="vR" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cc88ff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#7a3acc"/>
+      <stop offset="100%" stop-color="#000005"/>
+    </radialGradient>
+    <linearGradient id="wmR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e0c8ff"/>
+      <stop offset="100%" stop-color="#cc88ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="800" fill="url(#bgR)"/>
+
+  <g transform="translate(200 130)">
+    <ellipse cx="-22" cy="0" rx="32" ry="32" fill="url(#vR)"/>
+    <ellipse cx="22" cy="0" rx="32" ry="32" fill="url(#vR)"/>
+    <path d="M -22 0 Q 0 -16 22 0 Q 0 16 -22 0 Z" fill="none" stroke="#cc88ff" stroke-width="1.2" stroke-opacity="0.6"/>
+  </g>
+
+  <text x="200" y="225" text-anchor="middle" font-family="Cinzel Decorative, serif" font-weight="900" font-size="22" letter-spacing="5" fill="url(#wmR)">INFINITEWORLDS</text>
+  <text x="200" y="252" text-anchor="middle" font-family="Crimson Pro, serif" font-style="italic" font-size="11" letter-spacing="3" fill="#7a5a99">EVERY WORD RESHAPES REALITY</text>
+
+  <g transform="translate(30 310)">
+    <rect width="270" height="44" rx="8" fill="rgba(255,255,255,0.04)" stroke="#7a3acc" stroke-opacity="0.3"/>
+    <text x="16" y="29" font-family="Crimson Pro, serif" font-size="15" fill="#7a5a99" font-style="italic">Name your world...</text>
+    <rect x="280" width="60" height="44" rx="8" fill="#7a3acc" fill-opacity="0.7" stroke="#aa66ff" stroke-opacity="0.5"/>
+    <text x="310" y="29" text-anchor="middle" font-family="Cinzel Decorative, serif" font-size="10" letter-spacing="2" fill="#e0c8ff">BEGIN</text>
+  </g>
+
+  <text x="200" y="400" text-anchor="middle" font-family="Cinzel, serif" font-size="9" letter-spacing="3" fill="#7a5a99" opacity="0.5">EXISTING WORLDS</text>
+
+  <g transform="translate(30 420)">
+    <rect width="340" height="50" rx="8" fill="rgba(40,20,80,0.3)" stroke="#7a3acc" stroke-opacity="0.2"/>
+    <text x="20" y="22" font-family="Crimson Pro, serif" font-size="15" fill="#e0c8ff" opacity="0.85">The Whispering Grove</text>
+    <text x="20" y="38" font-family="Crimson Pro, serif" font-size="11" font-style="italic" fill="#7a5a99">forest · HUMAN</text>
+  </g>
+  <g transform="translate(30 482)">
+    <rect width="340" height="50" rx="8" fill="rgba(40,20,80,0.3)" stroke="#7a3acc" stroke-opacity="0.2"/>
+    <text x="20" y="22" font-family="Crimson Pro, serif" font-size="15" fill="#e0c8ff" opacity="0.85">Below the Cells</text>
+    <text x="20" y="38" font-family="Crimson Pro, serif" font-size="11" font-style="italic" fill="#7a5a99">microorganism · NANO</text>
+  </g>
+  <g transform="translate(30 544)">
+    <rect width="340" height="50" rx="8" fill="rgba(40,20,80,0.3)" stroke="#7a3acc" stroke-opacity="0.2"/>
+    <text x="20" y="22" font-family="Crimson Pro, serif" font-size="15" fill="#e0c8ff" opacity="0.85">The Last Star</text>
+    <text x="20" y="38" font-family="Crimson Pro, serif" font-size="11" font-style="italic" fill="#7a5a99">cosmic · COSMIC</text>
+  </g>
+</svg>

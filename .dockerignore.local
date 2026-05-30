@@ -1,0 +1,15 @@
+node_modules
+**/node_modules
+.git
+.github
+data
+*.log
+.env
+.env.local
+.DS_Store
+dist
+.vite
+*.zip
+.cache
+.vscode
+.idea

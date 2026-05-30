@@ -1,0 +1,4 @@
+{
+  "installDependencies": true,
+  "startCommand": "npm install --prefix server && npm install --prefix client && cp .env.example .env && (node server/index.js &) && npm run dev --prefix client -- --host"
+}
