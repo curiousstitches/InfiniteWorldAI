@@ -21,7 +21,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci --ignore-scripts || npm install --ignore-scripts
-      - uses: actions/cache/save@v4
+      - uses: actions/cache/save@v5
         with:
           path: |
             node_modules
@@ -39,7 +39,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-      - uses: actions/cache/restore@v4
+      - uses: actions/cache/restore@v5
         with:
           path: |
             node_modules
