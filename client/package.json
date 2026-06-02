@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@babylonjs/core": "^7.12.0",
+    "@babylonjs/core": "^9.10.1",
     "@babylonjs/loaders": "^7.12.0",
     "@babylonjs/materials": "^7.12.0",
     "@babylonjs/serializers": "^7.12.0",
