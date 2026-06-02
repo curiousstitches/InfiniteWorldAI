@@ -59,7 +59,7 @@ jobs:
 
       - name: Comment PR (no provider)
         if: ${{ secrets.VERCEL_TOKEN == '' && secrets.NETLIFY_AUTH_TOKEN == '' }}
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             github.rest.issues.createComment({
